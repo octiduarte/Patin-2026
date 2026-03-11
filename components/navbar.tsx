@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0d1b3e] shadow-lg py-3" : "bg-transparent py-5"
+        scrolled ? "bg-navy shadow-lg py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function Navbar() {
           />
           <span className="text-white font-bold text-sm leading-tight hidden sm:block">
             Copa Apertura<br />
-            <span className="text-[#c8102e] font-black">"B" Nacional</span>
+            <span className="text-red font-black">"B" Nacional</span>
           </span>
         </a>
 
@@ -51,7 +51,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-[#c8102e]"
+              className="text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-red"
             >
               {link.label}
             </a>
@@ -70,13 +70,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0d1b3e] border-t border-white/10 px-4 py-4">
+        <div className="md:hidden bg-navy border-t border-white/10 px-4 py-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block text-white/80 hover:text-[#c8102e] font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
+              className="block text-white/80 hover:text-red font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
             >
               {link.label}
             </a>

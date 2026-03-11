@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Barlow, Barlow_Condensed } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import '../styles/globals.css'
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -18,23 +17,9 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata: Metadata = {
   title: 'Copa Apertura B Nacional – Patinaje Artístico | Posadas, Misiones 2025',
   description: 'Copa Apertura B Nacional de Patinaje Artístico sobre Ruedas. Posadas, Misiones, Argentina. 25 de Abril al 2 de Mayo. Organizado por FEMIPAT y CAP.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/logos/navbar/LOGO%20COPA%20APERTURA%20NACIONAL%20B%202026.png',
+    apple: '/images/logos/navbar/LOGO%20COPA%20APERTURA%20NACIONAL%20B%202026.png',
   },
 }
 
@@ -47,7 +32,6 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${barlow.variable} ${barlowCondensed.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )

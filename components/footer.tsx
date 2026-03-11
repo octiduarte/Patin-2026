@@ -15,14 +15,14 @@ export default function Footer() {
   return (
     <footer className="bg-[#060f24] text-white">
       {/* Top band */}
-      <div className="h-1 bg-[#c8102e]" />
+      <div className="h-1 bg-red" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-[#c8102e] flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-full bg-red flex items-center justify-center shrink-0">
                 <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 3C9.5 3 7 5 7 8C7 10.5 9 12.5 12 14C15 12.5 17 10.5 17 8C17 5 14.5 3 12 3Z" fill="white"/>
                   <path d="M12 14C8 16 5 18 5 21H19C19 18 16 16 12 14Z" fill="white"/>
@@ -33,7 +33,7 @@ export default function Footer() {
                   className="text-white font-black text-2xl uppercase leading-none"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
-                  Copa Apertura <span className="text-[#c8102e]">"B"</span> Nacional
+                  Copa Apertura <span className="text-red">"B"</span> Nacional
                 </h2>
                 <p className="text-white/50 text-xs uppercase tracking-widest mt-1">
                   Patinaje Artístico sobre Ruedas
@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 mt-5">
-              <MapPin size={14} className="text-[#c8102e] shrink-0" />
+              <MapPin size={14} className="text-red shrink-0" />
               <span className="text-white/60 text-sm">Posadas, Misiones, Argentina</span>
             </div>
             <p className="text-white/40 text-sm mt-2 pl-5">
@@ -57,7 +57,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram FEMIPAT"
-                className="w-9 h-9 rounded-sm bg-[#162040] hover:bg-[#c8102e] flex items-center justify-center transition-colors duration-200"
+                className="w-9 h-9 rounded-sm bg-navy-light hover:bg-red flex items-center justify-center transition-colors duration-200"
               >
                 <Instagram size={16} />
               </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook FEMIPAT"
-                className="w-9 h-9 rounded-sm bg-[#162040] hover:bg-[#c8102e] flex items-center justify-center transition-colors duration-200"
+                className="w-9 h-9 rounded-sm bg-navy-light hover:bg-red flex items-center justify-center transition-colors duration-200"
               >
                 <Facebook size={16} />
               </a>
@@ -75,7 +75,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube del evento"
-                className="w-9 h-9 rounded-sm bg-[#162040] hover:bg-[#c8102e] flex items-center justify-center transition-colors duration-200"
+                className="w-9 h-9 rounded-sm bg-navy-light hover:bg-red flex items-center justify-center transition-colors duration-200"
               >
                 <Youtube size={16} />
               </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/50 hover:text-[#c8102e] text-sm transition-colors duration-200"
+                  className="text-white/50 hover:text-red text-sm transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -104,7 +104,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               {organizers.map((org) => (
                 <div key={org} className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#c8102e] shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-red shrink-0" />
                   <span className="text-white/50 text-sm">{org}</span>
                 </div>
               ))}
@@ -113,7 +113,7 @@ export default function Footer() {
             <div className="mt-6 pt-6 border-t border-white/10">
               <p className="text-white/30 text-xs leading-relaxed">
                 Torneo oficial avalado por la{" "}
-                <a href="https://www.cap.org.ar" target="_blank" rel="noopener noreferrer" className="text-[#c8102e] hover:underline">
+                <a href="https://www.cap.org.ar" target="_blank" rel="noopener noreferrer" className="text-red hover:underline">
                   Confederación Argentina de Patinaje (CAP)
                 </a>
               </p>

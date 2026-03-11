@@ -13,17 +13,17 @@ export default function SobreTorneo() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Section header */}
         <div className="flex flex-col items-center text-center mb-14">
-          <span className="text-[#c8102e] text-xs font-black uppercase tracking-widest mb-3">El Torneo</span>
-          <h2 className="text-[#0d1b3e] font-black text-4xl md:text-5xl uppercase leading-tight text-balance" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+          <span className="text-red text-xs font-black uppercase tracking-widest mb-3">El Torneo</span>
+          <h2 className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight text-balance" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Sobre el Torneo
           </h2>
-          <div className="w-16 h-1 bg-[#c8102e] mt-4 mb-6" />
-          <p className="text-[#0d1b3e]/70 text-lg max-w-3xl leading-relaxed">
-            La <strong className="text-[#0d1b3e]">Copa Apertura "B" Nacional de Patinaje Artístico sobre Ruedas</strong> es uno de los torneos más importantes del calendario federativo argentino.
+          <div className="w-16 h-1 bg-red mt-4 mb-6" />
+          <p className="text-navy/70 text-lg max-w-3xl leading-relaxed">
+            La <strong className="text-navy">Copa Apertura "B" Nacional de Patinaje Artístico sobre Ruedas</strong> es uno de los torneos más importantes del calendario federativo argentino.
             Organizado por la <strong>Federación Misionera de Patinaje (FEMIPAT)</strong> y avalado por la <strong>Confederación Argentina de Patinaje (CAP)</strong>,
             este evento reúne a los mejores patinadores del país en la categoría "B", representando a clubes y provincias de toda Argentina.
           </p>
-          <p className="text-[#0d1b3e]/60 text-base max-w-2xl leading-relaxed mt-4">
+          <p className="text-navy/60 text-base max-w-2xl leading-relaxed mt-4">
             Posadas, capital de Misiones, abre nuevamente sus puertas para ser sede de esta gran fiesta del deporte nacional. 
             Competidores de distintas edades y especialidades se darán cita en el CEPARD para demostrar su talento y representar a sus provincias con orgullo.
           </p>
@@ -34,10 +34,10 @@ export default function SobreTorneo() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-[#0d1b3e] text-white rounded-sm p-6 flex flex-col items-center text-center"
+              className="bg-navy text-white rounded-sm p-6 flex flex-col items-center text-center"
             >
               <span
-                className="font-black text-4xl md:text-5xl text-[#c8102e] leading-none"
+                className="font-black text-4xl md:text-5xl text-red leading-none"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 {stat.value}
@@ -49,7 +49,7 @@ export default function SobreTorneo() {
 
         {/* Gallery grid */}
         <div>
-          <h3 className="text-[#0d1b3e] font-black text-2xl uppercase mb-6" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+          <h3 className="text-navy font-black text-2xl uppercase mb-6" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Galería – Edición 2025
           </h3>
 
@@ -63,7 +63,7 @@ export default function SobreTorneo() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#0d1b3e]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             {/* Small image 1 */}
             <div className="relative aspect-4/3 rounded-sm overflow-hidden group">
@@ -73,7 +73,7 @@ export default function SobreTorneo() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#0d1b3e]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             {/* Small image 2 */}
             <div className="relative aspect-4/3 rounded-sm overflow-hidden group">
@@ -83,7 +83,7 @@ export default function SobreTorneo() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#0d1b3e]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
 
@@ -97,10 +97,10 @@ export default function SobreTorneo() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#0d1b3e]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             {/* Video 1 */}
-            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-[#0d1b3e]">
+            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-navy">
               <video
                 src="/images/edicion-2025/video1.mp4"
                 className="w-full h-full object-cover"
@@ -111,7 +111,7 @@ export default function SobreTorneo() {
               />
             </div>
             {/* Video 2 */}
-            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-[#0d1b3e]">
+            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-navy">
               <video
                 src="/images/edicion-2025/video2.mp4"
                 className="w-full h-full object-cover"
@@ -122,7 +122,7 @@ export default function SobreTorneo() {
               />
             </div>
             {/* Video 3 */}
-            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-[#0d1b3e]">
+            <div className="relative aspect-3/4 rounded-sm overflow-hidden bg-navy">
               <video
                 src="/images/edicion-2025/video3.mp4"
                 className="w-full h-full object-cover"

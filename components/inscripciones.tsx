@@ -42,15 +42,15 @@ export default function Inscripciones() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-14">
-          <span className="text-[#c8102e] text-xs font-black uppercase tracking-widest mb-3">Participá</span>
+          <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Participá</span>
           <h2
-            className="text-[#0d1b3e] font-black text-4xl md:text-5xl uppercase leading-tight"
+            className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Inscripciones
           </h2>
-          <div className="w-16 h-1 bg-[#c8102e] mt-4 mb-6" />
-          <p className="text-[#0d1b3e]/60 max-w-xl text-base leading-relaxed">
+          <div className="w-16 h-1 bg-red mt-4 mb-6" />
+          <p className="text-navy/60 max-w-xl text-base leading-relaxed">
             ¿Sos patinador/a y querés participar en la Copa Apertura "B" Nacional? Seguí estos pasos para inscribirte y ser parte del torneo más importante de la temporada.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Inscripciones() {
           {/* Left: Steps */}
           <div>
             <h3
-              className="text-[#0d1b3e] font-black text-2xl uppercase mb-6"
+              className="text-navy font-black text-2xl uppercase mb-6"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               Cómo inscribirse
@@ -70,19 +70,19 @@ export default function Inscripciones() {
                 return (
                   <div key={step.title} className="flex items-start gap-4 group">
                     <div className="flex flex-col items-center gap-1 shrink-0">
-                      <div className="w-10 h-10 rounded-sm bg-[#0d1b3e] flex items-center justify-center group-hover:bg-[#c8102e] transition-colors duration-300">
+                      <div className="w-10 h-10 rounded-sm bg-navy flex items-center justify-center group-hover:bg-red transition-colors duration-300">
                         <Icon size={18} className="text-white" />
                       </div>
                       {idx < steps.length - 1 && (
-                        <div className="w-px h-6 bg-[#0d1b3e]/15" />
+                        <div className="w-px h-6 bg-navy/15" />
                       )}
                     </div>
                     <div className="pt-1">
-                      <span className="text-[#c8102e] text-[10px] font-black uppercase tracking-widest">
+                      <span className="text-red text-[10px] font-black uppercase tracking-widest">
                         Paso {idx + 1}
                       </span>
-                      <h4 className="text-[#0d1b3e] font-bold text-base mt-0.5">{step.title}</h4>
-                      <p className="text-[#0d1b3e]/60 text-sm leading-relaxed mt-1">{step.description}</p>
+                      <h4 className="text-navy font-bold text-base mt-0.5">{step.title}</h4>
+                      <p className="text-navy/60 text-sm leading-relaxed mt-1">{step.description}</p>
                     </div>
                   </div>
                 )
@@ -95,12 +95,12 @@ export default function Inscripciones() {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#c8102e] hover:bg-[#a80d26] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-sm transition-all duration-200 shadow-lg shadow-[#c8102e]/20 hover:shadow-[#c8102e]/40 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-3 bg-red hover:bg-red-dark text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-sm transition-all duration-200 shadow-lg shadow-red/20 hover:shadow-red/40 hover:-translate-y-0.5"
               >
                 Formulario de Inscripción
                 <ExternalLink size={16} />
               </a>
-              <p className="text-[#0d1b3e]/40 text-xs mt-3">
+              <p className="text-navy/40 text-xs mt-3">
                 * Serás redirigido al formulario oficial de FEMIPAT/CAP
               </p>
             </div>
@@ -109,24 +109,24 @@ export default function Inscripciones() {
           {/* Right: Requirements */}
           <div>
             <h3
-              className="text-[#0d1b3e] font-black text-2xl uppercase mb-6"
+              className="text-navy font-black text-2xl uppercase mb-6"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               Requisitos para participar
             </h3>
-            <div className="bg-[#0d1b3e] rounded-sm p-6">
+            <div className="bg-navy rounded-sm p-6">
               <div className="flex flex-col gap-3">
                 {requirements.map((req) => (
                   <div key={req} className="flex items-start gap-3">
-                    <CheckCircle size={14} className="text-[#c8102e] shrink-0 mt-0.5" />
+                    <CheckCircle size={14} className="text-red shrink-0 mt-0.5" />
                     <span className="text-white/75 text-sm leading-snug">{req}</span>
                   </div>
                 ))}
               </div>
 
               <div className="mt-6 pt-5 border-t border-white/10">
-                <div className="flex items-start gap-3 bg-[#c8102e]/15 rounded-sm p-4">
-                  <AlertCircle size={16} className="text-[#c8102e] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 bg-red/15 rounded-sm p-4">
+                  <AlertCircle size={16} className="text-red shrink-0 mt-0.5" />
                   <div>
                     <span className="text-white font-bold text-sm block">Cierre de inscripciones</span>
                     <span className="text-white/60 text-sm">18 de Abril de 2025</span>
@@ -137,25 +137,25 @@ export default function Inscripciones() {
 
             {/* Contact info */}
             <div className="mt-6 bg-[#f5f6fa] rounded-sm p-5">
-              <h4 className="text-[#0d1b3e] font-bold text-sm mb-3 uppercase tracking-wide">
+              <h4 className="text-navy font-bold text-sm mb-3 uppercase tracking-wide">
                 Consultas e información
               </h4>
               <div className="flex flex-col gap-2">
-                <p className="text-[#0d1b3e]/65 text-sm">
+                <p className="text-navy/65 text-sm">
                   <span className="font-semibold">Email:</span>{" "}
-                  <a href="mailto:femipat@gmail.com" className="text-[#c8102e] hover:underline">
+                  <a href="mailto:femipat@gmail.com" className="text-red hover:underline">
                     femipat@gmail.com
                   </a>
                 </p>
-                <p className="text-[#0d1b3e]/65 text-sm">
+                <p className="text-navy/65 text-sm">
                   <span className="font-semibold">Instagram:</span>{" "}
-                  <a href="https://instagram.com/femipat" className="text-[#c8102e] hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href="https://instagram.com/femipat" className="text-red hover:underline" target="_blank" rel="noopener noreferrer">
                     @femipat
                   </a>
                 </p>
-                <p className="text-[#0d1b3e]/65 text-sm">
+                <p className="text-navy/65 text-sm">
                   <span className="font-semibold">Sitio CAP:</span>{" "}
-                  <a href="https://www.cap.org.ar" className="text-[#c8102e] hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.cap.org.ar" className="text-red hover:underline" target="_blank" rel="noopener noreferrer">
                     www.cap.org.ar
                   </a>
                 </p>

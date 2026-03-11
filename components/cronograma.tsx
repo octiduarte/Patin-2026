@@ -78,18 +78,18 @@ const schedule: DaySchedule[] = [
 
 export default function Cronograma() {
   return (
-    <section id="cronograma" className="py-20 md:py-28 bg-[#0d1b3e]">
+    <section id="cronograma" className="py-20 md:py-28 bg-navy">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-14">
-          <span className="text-[#c8102e] text-xs font-black uppercase tracking-widest mb-3">Programa</span>
+          <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Programa</span>
           <h2
             className="text-white font-black text-4xl md:text-5xl uppercase leading-tight"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Cronograma del Torneo
           </h2>
-          <div className="w-16 h-1 bg-[#c8102e] mt-4 mb-6" />
+          <div className="w-16 h-1 bg-red mt-4 mb-6" />
           <p className="text-white/60 max-w-xl text-base leading-relaxed">
             25 de Abril al 2 de Mayo de 2025 · CEPARD, Posadas, Misiones
           </p>
@@ -100,10 +100,10 @@ export default function Cronograma() {
           {schedule.map((day, idx) => (
             <div
               key={day.date}
-              className="bg-[#162040] rounded-sm overflow-hidden border border-white/5 hover:border-[#c8102e]/40 transition-all duration-300"
+              className="bg-navy-light rounded-sm overflow-hidden border border-white/5 hover:border-red/40 transition-all duration-300"
             >
               {/* Day header */}
-              <div className="bg-[#c8102e] px-4 py-3 flex items-center justify-between">
+              <div className="bg-red px-4 py-3 flex items-center justify-between">
                 <div>
                   <span className="text-white font-black text-sm uppercase tracking-wide block">
                     {day.day}
@@ -127,7 +127,7 @@ export default function Cronograma() {
                   >
                     <span
                       className={`text-xs font-black shrink-0 mt-0.5 ${
-                        event.highlight ? "text-[#c8102e]" : "text-white/30"
+                        event.highlight ? "text-red" : "text-white/30"
                       }`}
                     >
                       {event.time}
@@ -137,7 +137,7 @@ export default function Cronograma() {
                     </span>
                     {event.highlight && (
                       <span className="ml-auto shrink-0">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#c8102e] block mt-1.5" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-red block mt-1.5" />
                       </span>
                     )}
                   </div>
