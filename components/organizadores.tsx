@@ -12,25 +12,25 @@ const organizers: OrganizerLogo[] = [
     name: "Federación Misionera de Patinaje",
     shortName: "FEMIPAT",
     role: "Organizador Principal",
-    logoSrc: "/images/logos/organizaciones/logo_femipat.png",
+    logoSrc: "/images/logos/organizaciones/logo_femipat.webp",
   },
   {
     name: "Confederación Argentina de Patinaje",
     shortName: "CAP",
     role: "Aval Nacional",
-    logoSrc: "/images/logos/organizaciones/logo_cap_alt.png",
+    logoSrc: "/images/logos/organizaciones/logo_cap_azul.webp",
   },
   {
     name: "Ministerio de Deportes de Misiones",
     shortName: "MISIONES",
     role: "Apoyo Institucional",
-    logoSrc: "/images/logos/organizaciones/logo_ministerio_deportes.jpg",
+    logoSrc: "/images/logos/organizaciones/logo_ministerio_deportes.webp",
   },
   {
     name: "Municipalidad de Posadas",
     shortName: "POSADAS",
     role: "Apoyo Municipal",
-    logoSrc: "/images/logos/organizaciones/logo_municipalidad_posadas_alt.jpg",
+    logoSrc: "/images/logos/organizaciones/logo_municipalidad_posadas.webp",
   },
 ]
 
@@ -60,13 +60,13 @@ export default function Organizadores() {
               className="group border border-navy/10 rounded-sm p-8 flex flex-col items-center text-center hover:border-red hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               {/* Logo */}
-              <div className="w-full h-24 mb-5 flex items-center justify-center">
+              <div className="w-full h-24 mb-5 relative">
                 <Image
                   src={org.logoSrc}
                   alt={`Logo ${org.shortName}`}
-                  width={180}
-                  height={96}
-                  className="object-contain max-h-24 w-auto"
+                  fill
+                  sizes="(min-width: 1024px) 18vw, (min-width: 640px) 40vw, 80vw"
+                  className="object-contain"
                 />
               </div>
 

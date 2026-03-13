@@ -25,6 +25,7 @@ export default function LugarEvento() {
                 src="/images/cepard.jpg"
                 alt="Centro Deportivo CEPARD – Posadas, Misiones"
                 fill
+                sizes="(min-width: 1024px) 44vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-navy to-transparent p-4">

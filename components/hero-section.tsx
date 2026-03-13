@@ -1,175 +1,195 @@
-﻿import { ChevronDown } from "lucide-react"
-import Image from "next/image"
+﻿import Image from "next/image";
+import { ArrowRight, MapPin, Calendar } from "lucide-react";
 
 export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen bg-navy overflow-hidden flex flex-col"
     >
-      {/* Background Layers */}
-      <div className="absolute inset-0 z-0">
+      {/* ── BACKGROUND PHOTO (right 60%, full height) ────────────────── */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[62%] z-0">
         <Image
-          src="/images/hero-section/fondo-herosection.jpg"
-          alt="Patinaje artistico sobre ruedas Copa Apertura B Nacional"
+          src="/images/hero-section/fondo-herosection.webp"
+          alt="Patinaje artístico sobre ruedas – Copa Apertura B Nacional"
           fill
+          sizes="(min-width: 1024px) 62vw, 100vw"
           className="object-cover object-center"
           priority
         />
-        {/* Primary tonal gradient */}
-        <div className="absolute inset-0 bg-linear-to-b from-navy/92 via-navy/55 to-navy/97" />
-        {/* Radial vignette */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 90% 65% at 50% 42%, transparent 20%, rgba(13,27,62,0.7) 100%)",
-          }}
-        />
-        {/* Film-grain texture for depth */}
-        <div
-          className="absolute inset-0 opacity-[0.045] mix-blend-overlay pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: "repeat",
-            backgroundSize: "200px",
-          }}
-        />
-        {/* Bottom crimson accent bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-red" />
+        {/* Fade into navy on the left edge */}
+        <div className="absolute inset-0 bg-linear-to-r from-navy via-navy/60 to-transparent" />
+        {/* Subtle bottom fade */}
+        <div className="absolute inset-0 bg-linear-to-t from-navy/90 via-transparent to-transparent" />
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-12 text-center flex flex-col items-center">
-
-        {/* Editorial category tag */}
+      {/* ── DIAGONAL RED SLASH ───────────────────────────────────────── */}
+      <div
+        className="absolute inset-y-0 left-0 z-10 hidden lg:block"
+        style={{ width: "52%" }}
+        aria-hidden="true"
+      >
+        {/* solid navy panel */}
+        <div className="absolute inset-0 bg-navy" />
+        {/* diagonal red slash on right edge */}
         <div
-          className="hero-fade-up flex items-center gap-3 mb-5 md:mb-10"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="h-px w-8 bg-red block" />
-          <span className="text-red font-black uppercase tracking-[0.25em] md:tracking-[0.35em] text-[0.6rem] md:text-[0.7rem]">
-            Patinaje Artistico &nbsp;&nbsp; 2026
-          </span>
-          <span className="h-px w-8 bg-red block" />
-        </div>
+          className="absolute right-0 inset-y-0 w-24 bg-red"
+          style={{ clipPath: "polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%)" }}
+        />
+        {/* thin white hairline */}
+        <div
+          className="absolute right-0 inset-y-0 w-4 bg-white/15"
+          style={{ clipPath: "polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%)" }}
+        />
+      </div>
 
-        {/* Main headline */}
-        <h1 className="text-white font-black uppercase leading-none text-balance"style={{
+      {/* ── CONTENT ──────────────────────────────────────────────────── */}
+      <div className="relative z-20 flex flex-col justify-center min-h-screen px-6 md:px-12 lg:px-20 max-w-160">
+        {/* Main title */}
+        <h1
+          className="hero-fade-up text-white font-black uppercase leading-[0.88] tracking-tight text-balance"
+          style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             animationDelay: "0.25s",
-          }}>
-          <span className="block text-5xl md:text-7xl lg:text-8xl tracking-tight">Copa Apertura</span>
-          <span className="block text-6xl md:text-8xl lg:text-9xl tracking-tight mt-0.5 md:mt-1">
-            <span className="text-red">"B"</span> Nacional
+          }}
+        >
+          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90">
+            Copa
+          </span>
+          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90">
+            Apertura
+          </span>
+          {/* "B" in a red parallelogram pill */}
+          <span className="flex items-center gap-4 mt-1">
+            <span
+              className="inline-block bg-red text-white px-5 py-1 text-[clamp(2.8rem,8vw,6rem)] leading-none"
+              style={{ clipPath: "polygon(0 0,100% 0,96% 100%,0 100%)" }}
+            >
+              &quot;B&quot;
+            </span>
+            <span className="text-[clamp(2.8rem,8vw,6rem)]">Nacional</span>
+          </span>
+          <span className="block text-[clamp(1.4rem,4vw,2.6rem)] text-white/60 font-bold tracking-[0.08em] mt-3">
+            Patinaje Artístico
           </span>
         </h1>
 
-        {/* Red rule divider */}
+        {/* Diamond divider */}
         <div
-          className="hero-fade-up w-10 md:w-14 h-0.5 bg-red my-4 md:my-8"
+          className="hero-fade-up flex items-center gap-4 my-4 md:my-8"
           style={{ animationDelay: "0.4s" }}
-        />
+        >
+          <div className="h-px flex-1 bg-white/15" />
+          <div className="w-2 h-2 bg-red rotate-45" />
+          <div className="h-px flex-1 bg-white/15" />
+        </div>
 
-        {/* Date & location pills */}
+        {/* Meta pills */}
         <div
-          className="hero-fade-up flex flex-row items-stretch justify-center gap-0"
+          className="hero-fade-up flex flex-wrap gap-3 mb-10"
           style={{ animationDelay: "0.52s" }}
         >
-          <div className="flex items-center gap-2 md:gap-3 border-l-2 border-red pl-3 pr-4 md:pl-4 md:pr-7 py-2.5 md:py-3 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-            <svg
-              className="w-3 h-3 md:w-3.5 md:h-3.5 text-red shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span className="text-white font-semibold text-xs md:text-sm tracking-wider md:tracking-widest">
-              Posadas, Misiones
-            </span>
+          <div className="flex items-center gap-2 border border-white/20 text-white text-sm font-semibold px-4 py-2.5 uppercase tracking-widest rounded-sm">
+            <MapPin size={14} className="text-red shrink-0" />
+            Posadas, Misiones
           </div>
-          <div className="w-px h-8 md:h-10 bg-white/10 self-center" />
-          <div className="flex items-center gap-2 md:gap-3 border-l-2 border-red pl-3 pr-4 md:pl-4 md:pr-7 py-2.5 md:py-3 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-            <svg
-              className="w-3 h-3 md:w-3.5 md:h-3.5 text-red shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <span className="text-white font-semibold text-xs md:text-sm tracking-wider md:tracking-widest">
-              25 Abril — 2 Mayo
-            </span>
+          <div className="flex items-center gap-2 border border-white/20 text-white text-sm font-semibold px-4 py-2.5 uppercase tracking-widest rounded-sm">
+            <Calendar size={14} className="text-red shrink-0" />
+            25 Abr – 2 May
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div
-          className="hero-fade-up mt-5 md:mt-10"
-          style={{ animationDelay: "0.65s" }}
-        >
+        {/* Split CTA */}
+        <div className="hero-fade-up" style={{ animationDelay: "0.65s" }}>
           <a
             href="#cronograma"
-            className="group relative inline-flex items-center gap-2 md:gap-3 bg-red text-white rounded-sm font-black uppercase tracking-[0.15em] md:tracking-[0.18em] text-[0.65rem] md:text-xs px-7 py-3.5 md:px-10 md:py-5 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_40px_rgba(200,16,47,0.45)] hover:-translate-y-0.5 active:translate-y-0"
+            className="group inline-flex items-center gap-0 self-start rounded-sm overflow-hidden"
           >
-            <span className="relative z-10">Ver Cronograma</span>
-            <ChevronDown
-              size={13}
-              className="relative z-10 transition-transform duration-300 group-hover:translate-y-1"
-            />
-            {/* Shimmer sweep */}
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-[200%] bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out pointer-events-none" />
+            <span className="bg-red text-white font-black uppercase tracking-widest text-sm px-7 py-4 transition-all duration-200 group-hover:bg-red-dark">
+              Ver Cronograma
+            </span>
+            <span className="bg-white text-navy px-4 py-4 transition-all duration-200 group-hover:bg-red group-hover:text-white">
+              <ArrowRight size={16} />
+            </span>
           </a>
         </div>
 
-        {/* Organizing logos */}
+        {/* Organizers strip */}
         <div
-          className="hero-fade-up mt-7 md:mt-14 w-full max-w-2xl"
+          className="hero-fade-up mt-6 md:pt-8 border-t border-white/10 space-y-3"
           style={{ animationDelay: "0.8s" }}
         >
-          <div className="border-t border-white/12 pt-5 md:pt-8 flex flex-wrap items-center justify-center gap-4 md:gap-10">
+          <span className="text-white/35 text-[10px] uppercase tracking-widest">
+            Organiza:
+          </span>
+          <div className="flex items-center gap-3 md:gap-5">
             <Image
-              src="/images/logos/organizaciones/logo_cap.png"
+              src="/images/logos/organizaciones/logo_cap_blanco.webp"
               alt="Logo CAP"
-              width={80}
-              height={80}
-              className="object-contain w-16 h-16 md:w-20 md:h-20 opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg p-1"
-              priority
+              width={64}
+              height={64}
+              className="object-contain h-8 md:h-14 w-auto"
             />
+            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
             <Image
-              src="/images/logos/organizaciones/logo_femipat.png"
+              src="/images/logos/organizaciones/logo_femipat.webp"
               alt="Logo FEMIPAT"
               width={64}
               height={64}
-              className="object-contain w-16 h-16 md:w-16 md:h-16 opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg p-1"
-              priority
+              className="object-contain h-8 md:h-14 w-auto"
             />
+            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
             <Image
-              src="/images/logos/organizaciones/logo_ministerio_deportes_alt.png"
+              src="/images/logos/organizaciones/logo_ministerio_deportes.webp"
               alt="Logo Misiones Gobierno"
-              width={140}
-              height={80}
-              className="object-contain w-24 h-24 md:w-40 md:h-20 opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg p-1"
-              priority
+              width={120}
+              height={48}
+              className="object-contain h-8 md:h-14 w-auto"
             />
+            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
             <Image
-              src="/images/logos/organizaciones/logo_municipalidad_posadas.png"
+              src="/images/logos/organizaciones/logo_municipalidad_posadas.webp"
               alt="Logo Posadas"
               width={64}
               height={64}
-              className="object-contain w-16 h-16 md:w-24 md:h-24 opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg p-1"
-              priority
+              className="object-contain h-8 md:h-14 w-auto"
             />
           </div>
         </div>
       </div>
 
-    
+      {/* ── BOTTOM TICKER TAPE ───────────────────────────────────────── */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-red overflow-hidden py-2.5">
+        <div
+          className="flex gap-12 whitespace-nowrap animate-[ticker_18s_linear_infinite]"
+          style={{ willChange: "transform" }}
+        >
+          {Array.from({ length: 6 }).map((_, i) => (
+            <span
+              key={i}
+              className="text-white font-black uppercase tracking-[0.2em] text-xs shrink-0"
+            >
+              Copa Apertura &quot;B&quot; Nacional &nbsp;·&nbsp; Posadas,
+              Misiones &nbsp;·&nbsp; 25 Abr – 2 May 2026 &nbsp;·&nbsp; Patinaje
+              Artístico sobre Ruedas &nbsp;·&nbsp;
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── VERTICAL EVENT CODE (decorative) ─────────────────────────── */}
+      <div
+        className="absolute right-6 bottom-16 z-20 hidden lg:flex flex-col items-center gap-2"
+        aria-hidden="true"
+      >
+        <div className="h-16 w-px bg-white/20" />
+        <span
+          className="text-white/25 text-[10px] uppercase tracking-[0.3em] font-bold"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          CEPARD · POSADAS
+        </span>
+      </div>
     </section>
-  )
+  );
 }

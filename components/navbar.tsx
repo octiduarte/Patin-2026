@@ -32,10 +32,11 @@ export default function Navbar() {
         {/* Logo / Brand */}
         <a href="#inicio" className="flex items-center gap-3">
           <Image
-            src="/images/logos/navbar/LOGO COPA APERTURA NACIONAL B 2026.png"
+            src="/images/logos/navbar/logo_copa.webp"
             alt="Logo Copa Apertura Nacional B"
             width={72}
             height={72}
+            sizes="56px"
             className="h-14 w-14 shrink-0 object-contain rounded-full"
             priority
           />

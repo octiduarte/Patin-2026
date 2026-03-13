@@ -18,7 +18,6 @@ export default function Home() {
       <Organizadores />
       <Cronograma />
       <Sponsors />
-      <Inscripciones />
       <Footer />
     </main>
   )

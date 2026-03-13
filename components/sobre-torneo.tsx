@@ -104,10 +104,11 @@ export default function SobreTorneo() {
               <video
                 src="/images/edicion-2025/video1.mp4"
                 className="w-full h-full object-cover"
+                poster="/images/edicion-2025/img1.jpeg"
                 controls
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
               />
             </div>
             {/* Video 2 */}
@@ -115,10 +116,11 @@ export default function SobreTorneo() {
               <video
                 src="/images/edicion-2025/video2.mp4"
                 className="w-full h-full object-cover"
+                poster="/images/edicion-2025/img2.jpeg"
                 controls
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
               />
             </div>
             {/* Video 3 */}
@@ -126,10 +128,11 @@ export default function SobreTorneo() {
               <video
                 src="/images/edicion-2025/video3.mp4"
                 className="w-full h-full object-cover"
+                poster="/images/edicion-2025/img3.jpeg"
                 controls
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
               />
             </div>
           </div>

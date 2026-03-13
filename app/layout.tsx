@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: 'Copa Apertura B Nacional – Patinaje Artístico | Posadas, Misiones 2025',
   description: 'Copa Apertura B Nacional de Patinaje Artístico sobre Ruedas. Posadas, Misiones, Argentina. 25 de Abril al 2 de Mayo. Organizado por FEMIPAT y CAP.',
   icons: {
-    icon: '/images/logos/navbar/LOGO%20COPA%20APERTURA%20NACIONAL%20B%202026.png',
-    apple: '/images/logos/navbar/LOGO%20COPA%20APERTURA%20NACIONAL%20B%202026.png',
+    icon: '/images/logos/navbar/logo_copa.webp',
+    apple: '/images/logos/navbar/logo_copa.webp',
   },
 }
 
