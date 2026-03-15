@@ -1,5 +1,5 @@
 ﻿import Image from "next/image";
-import { ArrowRight, MapPin, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -10,12 +10,13 @@ export default function HeroSection() {
       {/* ── BACKGROUND PHOTO (right 60%, full height) ────────────────── */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[62%] z-0">
         <Image
-          src="/images/hero-section/fondo-herosection.webp"
+          src="/images/edicion-2025/Horizontales/foto-2025_3.webp"
           alt="Patinaje artístico sobre ruedas – Copa Apertura B Nacional"
           fill
           sizes="(min-width: 1024px) 62vw, 100vw"
           className="object-cover object-center"
           priority
+          quality={75}
         />
         {/* Fade into navy on the left edge */}
         <div className="absolute inset-0 bg-linear-to-r from-navy via-navy/60 to-transparent" />
@@ -24,52 +25,43 @@ export default function HeroSection() {
       </div>
 
       {/* ── DIAGONAL RED SLASH ───────────────────────────────────────── */}
+      {/* Navy panel – blocks photo on the left, diagonal right edge */}
       <div
-        className="absolute inset-y-0 left-0 z-10 hidden lg:block"
-        style={{ width: "52%" }}
+        className="absolute inset-0 z-10 bg-navy hidden lg:block"
+        style={{ clipPath: "polygon(0 0, 70% 0, 50% 100%, 0 100%)" }}
         aria-hidden="true"
-      >
-        {/* solid navy panel */}
-        <div className="absolute inset-0 bg-navy" />
-        {/* diagonal red slash on right edge */}
-        <div
-          className="absolute right-0 inset-y-0 w-24 bg-red"
-          style={{ clipPath: "polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%)" }}
-        />
-        {/* thin white hairline */}
-        <div
-          className="absolute right-0 inset-y-0 w-4 bg-white/15"
-          style={{ clipPath: "polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%)" }}
-        />
-      </div>
+      />
+      {/* Red bar at the boundary (~70° from horizontal) */}
+      <div
+        className="absolute inset-0 z-10 bg-red hidden lg:block"
+        style={{ clipPath: "polygon(70% 0, 75% 0, 55% 100%, 50% 100%)" }}
+        aria-hidden="true"
+      />
 
       {/* ── CONTENT ──────────────────────────────────────────────────── */}
       <div className="relative z-20 flex flex-col justify-center min-h-screen px-6 md:px-12 lg:px-20 max-w-160">
         {/* Main title */}
         <h1
-          className="hero-fade-up text-white font-black uppercase leading-[0.88] tracking-tight text-balance"
-          style={{
-            fontFamily: "'Barlow Condensed', sans-serif",
-            animationDelay: "0.25s",
-          }}
+          className="hero-fade-up text-white uppercase leading-[0.88] tracking-tight text-balance"
+          style={{ animationDelay: "0.25s" }}
         >
-          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90">
+          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-normal">
             Copa
           </span>
-          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90">
+          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-black">
             Apertura
           </span>
-          {/* "B" in a red parallelogram pill */}
-          <span className="flex items-center gap-4 mt-1">
+          {/* "Nacional" and "B" in a red parallelogram pill */}
+          <span className="flex items-center flex-wrap lg:flex-nowrap gap-4 mt-1 font-black">
+            <span className="text-[clamp(2.8rem,8vw,6rem)]">Nacional</span>
             <span
-              className="inline-block bg-red text-white px-5 py-1 text-[clamp(2.8rem,8vw,6rem)] leading-none"
+              className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-normal"
               style={{ clipPath: "polygon(0 0,100% 0,96% 100%,0 100%)" }}
             >
               &quot;B&quot;
             </span>
-            <span className="text-[clamp(2.8rem,8vw,6rem)]">Nacional</span>
           </span>
-          <span className="block text-[clamp(1.4rem,4vw,2.6rem)] text-white/60 font-bold tracking-[0.08em] mt-3">
+          <span className="block text-[clamp(1.4rem,4vw,2.6rem)] text-white font-normal tracking-[0.08em] mt-3 lg:whitespace-nowrap">
             Patinaje Artístico
           </span>
         </h1>
@@ -84,19 +76,23 @@ export default function HeroSection() {
           <div className="h-px flex-1 bg-white/15" />
         </div>
 
-        {/* Meta pills */}
+        {/* Meta info */}
         <div
-          className="hero-fade-up flex flex-wrap gap-3 mb-10"
+          className="hero-fade-up flex flex-wrap items-center gap-x-4 gap-y-2 mb-10"
           style={{ animationDelay: "0.52s" }}
         >
-          <div className="flex items-center gap-2 border border-white/20 text-white text-sm font-semibold px-4 py-2.5 uppercase tracking-widest rounded-sm">
-            <MapPin size={14} className="text-red shrink-0" />
-            Posadas, Misiones
-          </div>
-          <div className="flex items-center gap-2 border border-white/20 text-white text-sm font-semibold px-4 py-2.5 uppercase tracking-widest rounded-sm">
-            <Calendar size={14} className="text-red shrink-0" />
-            25 Abr – 2 May
-          </div>
+          <span className="text-white/60 text-sm uppercase tracking-widest">
+            Del{" "}
+            <strong className="text-white font-black">25 de Abril</strong>
+            {" "}al{" "}
+            <strong className="text-white font-black">2 de Mayo</strong>
+          </span>
+          <span className="bg-red text-white text-xs font-black uppercase tracking-widest px-3 py-1.5">
+            Centro Deportivo &quot;CEPARD&quot;
+          </span>
+          <span className="text-white/40 text-sm uppercase tracking-widest">
+            | Posadas, Misiones
+          </span>
         </div>
 
         {/* Split CTA */}
@@ -122,38 +118,52 @@ export default function HeroSection() {
           <span className="text-white/35 text-[10px] uppercase tracking-widest">
             Organiza:
           </span>
-          <div className="flex items-center gap-3 md:gap-5">
-            <Image
-              src="/images/logos/organizaciones/logo_cap_blanco.webp"
-              alt="Logo CAP"
-              width={64}
-              height={64}
-              className="object-contain h-8 md:h-14 w-auto"
-            />
-            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
-            <Image
-              src="/images/logos/organizaciones/logo_femipat.webp"
-              alt="Logo FEMIPAT"
-              width={64}
-              height={64}
-              className="object-contain h-8 md:h-14 w-auto"
-            />
-            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
-            <Image
-              src="/images/logos/organizaciones/logo_ministerio_deportes.webp"
-              alt="Logo Misiones Gobierno"
-              width={120}
-              height={48}
-              className="object-contain h-8 md:h-14 w-auto"
-            />
-            <div className="w-px h-6 md:h-8 bg-white/15 shrink-0" />
-            <Image
-              src="/images/logos/organizaciones/logo_municipalidad_posadas.webp"
-              alt="Logo Posadas"
-              width={64}
-              height={64}
-              className="object-contain h-8 md:h-14 w-auto"
-            />
+          <div className="flex flex-nowrap items-stretch border border-white/20 rounded-sm overflow-hidden w-full lg:w-auto">
+            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+              <Image
+                src="/images/logos/navbar/logo_copa-png.webp"
+                alt="Logo Copa Apertura B Nacional"
+                width={160}
+                height={160}
+                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
+              />
+            </div>
+            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+              <Image
+                src="/images/logos/organizaciones/logo_cap_blanco.webp"
+                alt="Logo CAP"
+                width={160}
+                height={160}
+                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
+              />
+            </div>
+            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+              <Image
+                src="/images/logos/organizaciones/logo_femipat.webp"
+                alt="Logo FEMIPAT"
+                width={160}
+                height={160}
+                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
+              />
+            </div>
+            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+              <Image
+                src="/images/logos/organizaciones/logo_ministerio_deportes.webp"
+                alt="Logo Misiones Gobierno"
+                width={300}
+                height={120}
+                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
+              />
+            </div>
+            <div className="flex items-center justify-center p-3 md:p-4">
+              <Image
+                src="/images/logos/organizaciones/logo_municipalidad_posadas.webp"
+                alt="Logo Posadas"
+                width={160}
+                height={160}
+                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -161,7 +171,7 @@ export default function HeroSection() {
       {/* ── BOTTOM TICKER TAPE ───────────────────────────────────────── */}
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-red overflow-hidden py-2.5">
         <div
-          className="flex gap-12 whitespace-nowrap animate-[ticker_18s_linear_infinite]"
+          className="flex gap-12 whitespace-nowrap animate-[ticker_4s_linear_infinite] md:animate-[ticker_18s_linear_infinite]"
           style={{ willChange: "transform" }}
         >
           {Array.from({ length: 6 }).map((_, i) => (

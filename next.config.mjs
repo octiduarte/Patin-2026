@@ -4,8 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: false,
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
 }
 

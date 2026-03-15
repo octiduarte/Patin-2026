@@ -85,7 +85,6 @@ export default function Cronograma() {
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Programa</span>
           <h2
             className="text-white font-black text-4xl md:text-5xl uppercase leading-tight"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Cronograma del Torneo
           </h2>
@@ -112,7 +111,6 @@ export default function Cronograma() {
                 </div>
                 <span
                   className="text-white/30 font-black text-2xl"
-                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   {String(idx + 1).padStart(2, "0")}
                 </span>

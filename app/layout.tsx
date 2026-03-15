@@ -1,17 +1,26 @@
 import type { Metadata } from 'next'
-import { Barlow, Barlow_Condensed } from 'next/font/google'
+import localFont from 'next/font/local'
 import '../styles/globals.css'
 
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-barlow',
-})
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ['latin'],
-  weight: ['600', '700', '800', '900'],
-  variable: '--font-barlow-condensed',
+const gotham = localFont({
+  src: [
+    {
+      path: './fonts/Gotham Book.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Gotham Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Gotham Ultra.otf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-gotham',
 })
 
 export const metadata: Metadata = {
@@ -30,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${barlow.variable} ${barlowCondensed.variable} font-sans antialiased`}>
+      <body className={`${gotham.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

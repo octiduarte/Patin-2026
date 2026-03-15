@@ -16,7 +16,7 @@ const sponsors: Sponsor[] = [
   {
     name: "Hotel Julio César",
     type: "hotel",
-    image: "/images/sponsors/julio_cesar.jpg",
+    image: "/images/sponsors/julio_cesar.webp",
     description:
       "Uno de los hoteles más distinguidos de Posadas. Confort y elegancia en el corazón de la ciudad, a pocos minutos del CEPARD.",
     location: "San Lorenzo 2232, Posadas, Misiones",
@@ -26,7 +26,7 @@ const sponsors: Sponsor[] = [
   {
     name: "Hotel City",
     type: "hotel",
-    image: "/images/sponsors/hotel_city.jpg",
+    image: "/images/sponsors/hotel_city.webp",
     description:
       "Hotel moderno en pleno centro de Posadas. Habitaciones cómodas, WiFi de alta velocidad y excelente servicio para deportistas y familias.",
     location: "Colón 2235, Posadas, Misiones",
@@ -36,7 +36,7 @@ const sponsors: Sponsor[] = [
   {
     name: "Duomo",
     type: "food",
-    image: "/images/sponsors/duomo.jpg",
+    image: "/images/sponsors/duomo.webp",
     description:
       "El stand gastronómico oficial del evento. Duomo estará presente con sus mejores propuestas de comida y bebida durante todos los días del torneo.",
     badge: "Gastronomía Oficial",
@@ -45,7 +45,7 @@ const sponsors: Sponsor[] = [
   {
     name: "Catering del Evento",
     type: "catering",
-    image: "/images/sponsors/gallery-5.jpg",
+    image: "/images/sponsors/gallery-5.webp",
     description:
       "Servicio de catering presente durante toda la competencia para atletas, delegaciones y espectadores. Seguinos en redes para conocer el menú.",
     badge: "Catering Oficial",
@@ -75,7 +75,6 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
       <div className="p-5 flex flex-col gap-3 flex-1">
         <h3
           className="text-navy font-black text-xl uppercase leading-tight"
-          style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
         >
           {sponsor.name}
         </h3>
@@ -115,7 +114,6 @@ export default function Sponsors() {
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Colaboradores</span>
           <h2
             className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Sponsors del Torneo
           </h2>

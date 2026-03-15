@@ -31,7 +31,6 @@ export default function Footer() {
               <div>
                 <h2
                   className="text-white font-black text-2xl uppercase leading-none"
-                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   Copa Apertura <span className="text-red">"B"</span> Nacional
                 </h2>

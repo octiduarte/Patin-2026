@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#lugar", label: "Lugar" },
   { href: "#cronograma", label: "Cronograma" },
   { href: "#sponsors", label: "Sponsors" },
-  { href: "#inscripciones", label: "Inscripciones" },
+  { href: "#Entradas", label: "Entradas" },
 ]
 
 export default function Navbar() {
@@ -42,7 +42,7 @@ export default function Navbar() {
           />
           <span className="text-white font-bold text-sm leading-tight hidden sm:block">
             Copa Apertura<br />
-            <span className="text-red font-black">"B" Nacional</span>
+            <span className="text-white font-bold">Nacional "B"</span>
           </span>
         </a>
 

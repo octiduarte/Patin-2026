@@ -56,8 +56,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-barlow), 'Barlow', sans-serif;
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-gotham), 'Gotham', sans-serif;
   --color-navy: var(--navy);
   --color-navy-light: var(--navy-light);
   --color-navy-dark: var(--navy-dark);

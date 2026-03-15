@@ -10,7 +10,6 @@ export default function LugarEvento() {
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Sede Oficial</span>
           <h2
             className="text-white font-black text-4xl md:text-5xl uppercase leading-tight text-balance"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Lugar del Evento
           </h2>
@@ -22,14 +21,14 @@ export default function LugarEvento() {
           <div className="flex flex-col gap-6">
             <div className="relative aspect-video rounded-sm overflow-hidden">
               <Image
-                src="/images/cepard.jpg"
+                src="/images/cepard.webp"
                 alt="Centro Deportivo CEPARD – Posadas, Misiones"
                 fill
                 sizes="(min-width: 1024px) 44vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-navy to-transparent p-4">
-                <span className="text-white font-black text-xl uppercase" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                <span className="text-white font-black text-xl uppercase">
                   CEPARD
                 </span>
                 <p className="text-white/70 text-sm">Centro Deportivo de Posadas</p>
@@ -40,7 +39,6 @@ export default function LugarEvento() {
             <div className="bg-navy-light rounded-sm p-6 flex flex-col gap-4">
               <h3
                 className="text-white font-black text-2xl uppercase"
-                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Centro Deportivo CEPARD
               </h3>

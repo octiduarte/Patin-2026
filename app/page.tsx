@@ -5,7 +5,7 @@ import LugarEvento from "@/components/lugar-evento"
 import Organizadores from "@/components/organizadores"
 import Sponsors from "@/components/sponsors"
 import Cronograma from "@/components/cronograma"
-import Inscripciones from "@/components/inscripciones"
+import Inscripciones from "@/components/entradas"
 import Footer from "@/components/footer"
 
 export default function Home() {

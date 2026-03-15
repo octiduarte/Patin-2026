@@ -43,7 +43,6 @@ export default function Organizadores() {
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Instituciones</span>
           <h2
             className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
-            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             Organizadores
           </h2>
