@@ -21,7 +21,7 @@ const sponsors: Sponsor[] = [
       "Uno de los hoteles más distinguidos de Posadas. Confort y elegancia en el corazón de la ciudad, a pocos minutos del CEPARD.",
     location: "San Lorenzo 2232, Posadas, Misiones",
     discount: "Descuento especial para participantes del torneo",
-    badge: "Hospedaje Oficial",
+    badge: "Hospedaje",
   },
   {
     name: "Hotel City",
@@ -30,8 +30,8 @@ const sponsors: Sponsor[] = [
     description:
       "Hotel moderno en pleno centro de Posadas. Habitaciones cómodas, WiFi de alta velocidad y excelente servicio para deportistas y familias.",
     location: "Colón 2235, Posadas, Misiones",
-    discount: "Tarifas preferenciales para delegaciones del torneo",
-    badge: "Hospedaje Oficial",
+    discount: "Descuento especial para participantes del torneo",
+    badge: "Hospedaje",
   },
   {
     name: "Duomo",
@@ -39,17 +39,17 @@ const sponsors: Sponsor[] = [
     image: "/images/sponsors/duomo.webp",
     description:
       "El stand gastronómico oficial del evento. Duomo estará presente con sus mejores propuestas de comida y bebida durante todos los días del torneo.",
-    badge: "Gastronomía Oficial",
+    badge: "Gastronomía",
     instagram: "@duomo_posadas",
   },
   {
-    name: "Catering del Evento",
+    name: "Rio Uruguay",
     type: "catering",
-    image: "/images/sponsors/gallery-5.webp",
+    image: "/images/sponsors/rio_uruguay.webp",
     description:
-      "Servicio de catering presente durante toda la competencia para atletas, delegaciones y espectadores. Seguinos en redes para conocer el menú.",
-    badge: "Catering Oficial",
-    instagram: "@catering_oficial",
+      "Nuestro sponsor oficial Rio Uruguay estará presente durante toda la competencia brindando sus productos de calidad para atletas, delegaciones y espectadores.",
+    badge: "Sponsor Oficial",
+    instagram: "@riouruguay",
   },
 ]
 

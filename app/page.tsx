@@ -3,9 +3,9 @@ import HeroSection from "@/components/hero-section"
 import SobreTorneo from "@/components/sobre-torneo"
 import LugarEvento from "@/components/lugar-evento"
 import Organizadores from "@/components/organizadores"
-import Sponsors from "@/components/sponsors"
 import Cronograma from "@/components/cronograma"
-import Inscripciones from "@/components/entradas"
+import Sponsors from "@/components/sponsors"
+import Entradas from "@/components/entradas"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
       <Organizadores />
       <Cronograma />
       <Sponsors />
+      <Entradas />
       <Footer />
     </main>
   )

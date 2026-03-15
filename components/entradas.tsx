@@ -1,166 +1,29 @@
-import { ExternalLink, CheckCircle, AlertCircle, FileText, Users } from "lucide-react"
+import { ExternalLink } from "lucide-react";
 
-const steps = [
-  {
-    icon: FileText,
-    title: "Completá el formulario",
-    description:
-      "Ingresá al formulario oficial de inscripción y completá todos los datos del deportista: nombre, club, categoría, provincia y especialidad.",
-  },
-  {
-    icon: Users,
-    title: "Representación de club",
-    description:
-      "Las inscripciones deben ser realizadas por el director técnico o representante oficial del club, con aval de la federación provincial correspondiente.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Confirmación y acreditación",
-    description:
-      "Una vez procesada la inscripción, recibirás la confirmación por correo electrónico. El día del evento, presentate en acreditaciones con tu documento.",
-  },
-  {
-    icon: AlertCircle,
-    title: "Fecha límite",
-    description:
-      "Las inscripciones cierran el 18 de Abril de 2025. No se aceptarán inscripciones fuera de término. Asegurate de completar el proceso con anticipación.",
-  },
-]
-
-const requirements = [
-  "Ser miembro activo de un club afiliado a la federación provincial",
-  "Contar con el aval de la federación de tu provincia",
-  "Tener licencia federativa vigente para la temporada 2025",
-  "Haber participado en competencias provinciales (según reglamento CAP)",
-  "Presentar certificado médico actualizado",
-  "Abonar el arancel de inscripción según la categoría",
-]
-
-export default function Inscripciones() {
+export default function Entradas() {
   return (
-    <section id="inscripciones" className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        {/* Header */}
-        <div className="flex flex-col items-center text-center mb-14">
-          <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Participá</span>
-          <h2
-            className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
-          >
-            Inscripciones
-          </h2>
-          <div className="w-16 h-1 bg-red mt-4 mb-6" />
-          <p className="text-navy/60 max-w-xl text-base leading-relaxed">
-            ¿Sos patinador/a y querés participar en la Copa Apertura "B" Nacional? Seguí estos pasos para inscribirte y ser parte del torneo más importante de la temporada.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Left: Steps */}
-          <div>
-            <h3
-              className="text-navy font-black text-2xl uppercase mb-6"
-            >
-              Cómo inscribirse
-            </h3>
-            <div className="flex flex-col gap-5">
-              {steps.map((step, idx) => {
-                const Icon = step.icon
-                return (
-                  <div key={step.title} className="flex items-start gap-4 group">
-                    <div className="flex flex-col items-center gap-1 shrink-0">
-                      <div className="w-10 h-10 rounded-sm bg-navy flex items-center justify-center group-hover:bg-red transition-colors duration-300">
-                        <Icon size={18} className="text-white" />
-                      </div>
-                      {idx < steps.length - 1 && (
-                        <div className="w-px h-6 bg-navy/15" />
-                      )}
-                    </div>
-                    <div className="pt-1">
-                      <span className="text-red text-[10px] font-black uppercase tracking-widest">
-                        Paso {idx + 1}
-                      </span>
-                      <h4 className="text-navy font-bold text-base mt-0.5">{step.title}</h4>
-                      <p className="text-navy/60 text-sm leading-relaxed mt-1">{step.description}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-
-            {/* CTA Button */}
-            <div className="mt-8">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-red hover:bg-red-dark text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-sm transition-all duration-200 shadow-lg shadow-red/20 hover:shadow-red/40 hover:-translate-y-0.5"
-              >
-                Formulario de Inscripción
-                <ExternalLink size={16} />
-              </a>
-              <p className="text-navy/40 text-xs mt-3">
-                * Serás redirigido al formulario oficial de FEMIPAT/CAP
-              </p>
-            </div>
-          </div>
-
-          {/* Right: Requirements */}
-          <div>
-            <h3
-              className="text-navy font-black text-2xl uppercase mb-6"
-            >
-              Requisitos para participar
-            </h3>
-            <div className="bg-navy rounded-sm p-6">
-              <div className="flex flex-col gap-3">
-                {requirements.map((req) => (
-                  <div key={req} className="flex items-start gap-3">
-                    <CheckCircle size={14} className="text-red shrink-0 mt-0.5" />
-                    <span className="text-white/75 text-sm leading-snug">{req}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 pt-5 border-t border-white/10">
-                <div className="flex items-start gap-3 bg-red/15 rounded-sm p-4">
-                  <AlertCircle size={16} className="text-red shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-white font-bold text-sm block">Cierre de inscripciones</span>
-                    <span className="text-white/60 text-sm">18 de Abril de 2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact info */}
-            <div className="mt-6 bg-[#f5f6fa] rounded-sm p-5">
-              <h4 className="text-navy font-bold text-sm mb-3 uppercase tracking-wide">
-                Consultas e información
-              </h4>
-              <div className="flex flex-col gap-2">
-                <p className="text-navy/65 text-sm">
-                  <span className="font-semibold">Email:</span>{" "}
-                  <a href="mailto:femipat@gmail.com" className="text-red hover:underline">
-                    femipat@gmail.com
-                  </a>
-                </p>
-                <p className="text-navy/65 text-sm">
-                  <span className="font-semibold">Instagram:</span>{" "}
-                  <a href="https://instagram.com/femipat" className="text-red hover:underline" target="_blank" rel="noopener noreferrer">
-                    @femipat
-                  </a>
-                </p>
-                <p className="text-navy/65 text-sm">
-                  <span className="font-semibold">Sitio CAP:</span>{" "}
-                  <a href="https://www.cap.org.ar" className="text-red hover:underline" target="_blank" rel="noopener noreferrer">
-                    www.cap.org.ar
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section id="Entradas" className="py-20 md:py-28 bg-navy">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+        <span className="text-red text-xs font-black uppercase tracking-widest mb-4">
+          Entradas
+        </span>
+        <h2 className="text-white font-black text-4xl md:text-5xl uppercase leading-tight text-balance mb-6">
+          ¿Querés participar?
+        </h2>
+        <p className="text-white/70 text-lg max-w-2xl mb-10">
+          Completá tu inscripción antes del 18 de Abril de 2026 y sé parte de la
+          Copa Apertura Nacional "B".
+        </p>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 bg-red hover:bg-red-dark text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-sm transition-all duration-200 shadow-lg shadow-red/20 hover:shadow-red/40 hover:-translate-y-0.5"
+        >
+          Comprar entradas
+          <ExternalLink size={16} />
+        </a>
       </div>
     </section>
-  )
+  );
 }

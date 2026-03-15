@@ -18,6 +18,7 @@ const photos = [
   "/images/edicion-2025/Horizontales/foto-2025_5.webp",
   "/images/edicion-2025/Horizontales/foto-2025_6.webp",
   "/images/edicion-2025/Horizontales/foto-2025_7.webp",
+  "/images/edicion-2025/Horizontales/prueba.jpg",
   "/images/edicion-2025/Verticales/foto-2025_8.webp",
   "/images/edicion-2025/Verticales/foto-2025_9.webp",
   "/images/edicion-2025/Verticales/foto-2025_10.webp",
@@ -25,23 +26,31 @@ const photos = [
   "/images/edicion-2025/Verticales/foto-2025_12.webp",
 ];
 
-// Span classes per index (lg only). Layout:
-// Row1: [0 2×2][1][2]   Row2: [0 2×2][3][4]
-// Row3: [5][6 wide ][7]  Row4: [8][9][10][11]
-const lgSpans = [
-  "lg:col-span-2 lg:row-span-2",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "lg:col-span-2",
-  "",
-  "",
-  "",
-  "",
-  "",
+type PhotoSize = "large" | "tall" | "wide" | "small";
+
+// Mosaic layout: each entry describes the visual weight of that slot.
+// "large" = 2×2, "tall" = 1×2, "wide" = 2×1, "small" = 1×1 (default, no extra class needed)
+const PHOTO_SIZES: PhotoSize[] = [
+  "large", // 0
+  "small", // 1
+  "tall",  // 2
+  "small", // 3
+  "wide",  // 4
+  "small", // 5
+  "small", // 6
+  "large", // 7
+  "small", // 8
+  "tall",  // 9
+  "small", // 10
+  "wide",  // 11
 ];
+
+const SIZE_CLASSES: Record<PhotoSize, string> = {
+  large: "lg:col-span-2 lg:row-span-2",
+  tall:  "lg:row-span-2",
+  wide:  "lg:col-span-2",
+  small: "",
+};
 
 function shufflePhotos(list: string[]) {
   const shuffled = [...list];
@@ -141,7 +150,10 @@ export default function SobreTorneo() {
                 key={photo}
                 type="button"
                 onClick={() => setSelectedPhoto(photo)}
-                className={`relative overflow-hidden rounded-sm bg-navy/5 group cursor-zoom-in${lgSpans[index] ? ` ${lgSpans[index]}` : ""}`}
+                className={[
+                  "relative overflow-hidden rounded-sm bg-navy/5 group cursor-zoom-in",
+                  SIZE_CLASSES[PHOTO_SIZES[index]],
+                ].filter(Boolean).join(" ")}
                 aria-label={`Abrir imagen ${index + 1}`}
               >
                 <Image

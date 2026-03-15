@@ -52,7 +52,11 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-red"
+              className={
+                link.label === "Entradas"
+                  ? "bg-red text-white px-6 py-2 rounded-sm font-semibold uppercase tracking-wider transition-opacity duration-200 hover:opacity-90 text-sm"
+                  : "text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-red"
+              }
             >
               {link.label}
             </a>
@@ -77,7 +81,11 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block text-white/80 hover:text-red font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
+              className={
+                link.label === "Entradas"
+                  ? "block bg-red text-white font-semibold uppercase tracking-wider py-3 px-4 mb-3 rounded-sm text-sm transition-opacity hover:opacity-90"
+                  : "block text-white/80 hover:text-red font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
+              }
             >
               {link.label}
             </a>

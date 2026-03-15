@@ -8,9 +8,9 @@ export default function HeroSection() {
       className="relative min-h-screen bg-navy overflow-hidden flex flex-col"
     >
       {/* ── BACKGROUND PHOTO (right 60%, full height) ────────────────── */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[62%] z-0">
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[45%] z-0">
         <Image
-          src="/images/edicion-2025/Horizontales/foto-2025_3.webp"
+          src="/images/hero-section/fondo-herosection2.webp"
           alt="Patinaje artístico sobre ruedas – Copa Apertura B Nacional"
           fill
           sizes="(min-width: 1024px) 62vw, 100vw"
@@ -20,8 +20,6 @@ export default function HeroSection() {
         />
         {/* Fade into navy on the left edge */}
         <div className="absolute inset-0 bg-linear-to-r from-navy via-navy/60 to-transparent" />
-        {/* Subtle bottom fade */}
-        <div className="absolute inset-0 bg-linear-to-t from-navy/90 via-transparent to-transparent" />
       </div>
 
       {/* ── DIAGONAL RED SLASH ───────────────────────────────────────── */}
@@ -31,10 +29,22 @@ export default function HeroSection() {
         style={{ clipPath: "polygon(0 0, 70% 0, 50% 100%, 0 100%)" }}
         aria-hidden="true"
       />
-      {/* Red bar at the boundary (~70° from horizontal) */}
+      {/* Red bar at the boundary – thinner (~3% wide) */}
       <div
         className="absolute inset-0 z-10 bg-red hidden lg:block"
-        style={{ clipPath: "polygon(70% 0, 75% 0, 55% 100%, 50% 100%)" }}
+        style={{ clipPath: "polygon(70% 0, 73% 0, 53% 100%, 50% 100%)" }}
+        aria-hidden="true"
+      />
+      {/* Mobile: navy panel covers top portion, descending edge (left↑ right↓) */}
+      <div
+        className="absolute inset-0 z-10 bg-navy lg:hidden"
+        style={{ clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 55%)" }}
+        aria-hidden="true"
+      />
+      {/* Mobile: red bar – descending, ~4% thick */}
+      <div
+        className="absolute inset-0 z-10 bg-red lg:hidden"
+        style={{ clipPath: "polygon(0 55%, 100% 65%, 100% 69%, 0 59%)" }}
         aria-hidden="true"
       />
 
@@ -96,19 +106,7 @@ export default function HeroSection() {
         </div>
 
         {/* Split CTA */}
-        <div className="hero-fade-up" style={{ animationDelay: "0.65s" }}>
-          <a
-            href="#cronograma"
-            className="group inline-flex items-center gap-0 self-start rounded-sm overflow-hidden"
-          >
-            <span className="bg-red text-white font-black uppercase tracking-widest text-sm px-7 py-4 transition-all duration-200 group-hover:bg-red-dark">
-              Ver Cronograma
-            </span>
-            <span className="bg-white text-navy px-4 py-4 transition-all duration-200 group-hover:bg-red group-hover:text-white">
-              <ArrowRight size={16} />
-            </span>
-          </a>
-        </div>
+      
 
         {/* Organizers strip */}
         <div
@@ -169,15 +167,16 @@ export default function HeroSection() {
       </div>
 
       {/* ── BOTTOM TICKER TAPE ───────────────────────────────────────── */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-red overflow-hidden py-2.5">
+      {/* Mobile: full width · Desktop: solo sobre la foto (el diagonal termina en x=50% al bottom) */}
+      <div className="absolute bottom-0 left-0 right-0 lg:left-[53%] z-20 overflow-hidden py-2.5">
         <div
           className="flex gap-12 whitespace-nowrap animate-[ticker_4s_linear_infinite] md:animate-[ticker_18s_linear_infinite]"
           style={{ willChange: "transform" }}
         >
-          {Array.from({ length: 6 }).map((_, i) => (
+          {Array.from({ length: 8 }).map((_, i) => (
             <span
               key={i}
-              className="text-white font-black uppercase tracking-[0.2em] text-xs shrink-0"
+              className="font-black uppercase tracking-[0.2em] text-xs shrink-0 bg-linear-to-r from-red to-navy bg-clip-text text-transparent"
             >
               Copa Apertura &quot;B&quot; Nacional &nbsp;·&nbsp; Posadas,
               Misiones &nbsp;·&nbsp; 25 Abr – 2 May 2026 &nbsp;·&nbsp; Patinaje
