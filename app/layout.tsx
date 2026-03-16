@@ -24,8 +24,8 @@ const gotham = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Copa Apertura B Nacional – Patinaje Artístico | Posadas, Misiones 2025',
-  description: 'Copa Apertura B Nacional de Patinaje Artístico sobre Ruedas. Posadas, Misiones, Argentina. 25 de Abril al 2 de Mayo. Organizado por FEMIPAT y CAP.',
+  title: 'Copa Apertura Nacional B – Patinaje Artístico | Posadas, Misiones 2025',
+  description: 'Copa Apertura Nacional B de Patinaje Artístico sobre Ruedas. Posadas, Misiones, Argentina. 25 de Abril al 2 de Mayo. Organizado por FEMIPAT y CAP.',
   icons: {
     icon: '/images/logos/navbar/logo_copa.webp',
     apple: '/images/logos/navbar/logo_copa.webp',

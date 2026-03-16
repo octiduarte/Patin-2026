@@ -28,7 +28,7 @@ export default function LugarEvento() {
                 className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-navy to-transparent p-4">
-                <span className="text-white font-black text-xl uppercase">
+                <span className="text-white font-black text-xl uppercase" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   CEPARD
                 </span>
                 <p className="text-white/70 text-sm">Centro Deportivo de Posadas</p>

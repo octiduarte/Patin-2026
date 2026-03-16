@@ -178,7 +178,7 @@ export default function HeroSection() {
               key={i}
               className="font-black uppercase tracking-[0.2em] text-xs shrink-0 bg-linear-to-r from-red to-navy bg-clip-text text-transparent"
             >
-              Copa Apertura &quot;B&quot; Nacional &nbsp;·&nbsp; Posadas,
+              Copa Apertura Nacional &quot;B&quot; &nbsp;·&nbsp; Posadas,
               Misiones &nbsp;·&nbsp; 25 Abr – 2 May 2026 &nbsp;·&nbsp; Patinaje
               Artístico sobre Ruedas &nbsp;·&nbsp;
             </span>

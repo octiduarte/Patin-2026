@@ -3,7 +3,7 @@ import { MapPin, Tag, Instagram } from "lucide-react"
 
 interface Sponsor {
   name: string
-  type: "hotel" | "food" | "catering"
+  type: "hotel" | "food" | "transport"
   image: string
   description: string
   location?: string
@@ -20,7 +20,7 @@ const sponsors: Sponsor[] = [
     description:
       "Uno de los hoteles más distinguidos de Posadas. Confort y elegancia en el corazón de la ciudad, a pocos minutos del CEPARD.",
     location: "San Lorenzo 2232, Posadas, Misiones",
-    discount: "Descuento especial para participantes del torneo",
+    discount: "Descuentos especiales para participantes y acompañantes del torneo",
     badge: "Hospedaje",
   },
   {
@@ -30,7 +30,7 @@ const sponsors: Sponsor[] = [
     description:
       "Hotel moderno en pleno centro de Posadas. Habitaciones cómodas, WiFi de alta velocidad y excelente servicio para deportistas y familias.",
     location: "Colón 2235, Posadas, Misiones",
-    discount: "Descuento especial para participantes del torneo",
+    discount: "Descuentos especiales para participantes y acompañantes del torneo",
     badge: "Hospedaje",
   },
   {
@@ -44,12 +44,13 @@ const sponsors: Sponsor[] = [
   },
   {
     name: "Rio Uruguay",
-    type: "catering",
+    type: "transport",
     image: "/images/sponsors/rio_uruguay.webp",
     description:
-      "Nuestro sponsor oficial Rio Uruguay estará presente durante toda la competencia brindando sus productos de calidad para atletas, delegaciones y espectadores.",
-    badge: "Sponsor Oficial",
-    instagram: "@riouruguay",
+      "Nuestro sponsor oficial Río Uruguay acompaña esta competencia, empresa nacida en 1969 en Apóstoles y con una larga trayectoria en el transporte de la región.",
+    discount: "Descuentos especiales en traslados desde cualquier punto del país",
+    badge: "Transporte",
+    instagram: "@riouruguaybus",
   },
 ]
 

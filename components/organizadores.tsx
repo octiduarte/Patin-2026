@@ -9,21 +9,9 @@ interface OrganizerLogo {
 
 const organizers: OrganizerLogo[] = [
   {
-    name: "Federación Misionera de Patinaje",
-    shortName: "FEMIPAT",
-    role: "Organizador Principal",
-    logoSrc: "/images/logos/organizaciones/logo_femipat.webp",
-  },
-  {
-    name: "Confederación Argentina de Patinaje",
-    shortName: "CAP",
-    role: "Aval Nacional",
-    logoSrc: "/images/logos/organizaciones/logo_cap_azul.webp",
-  },
-  {
     name: "Ministerio de Deportes de Misiones",
     shortName: "MISIONES",
-    role: "Apoyo Institucional",
+    role: "Apoyo provincial",
     logoSrc: "/images/logos/organizaciones/logo_ministerio_deportes.webp",
   },
   {
@@ -44,7 +32,7 @@ export default function Organizadores() {
           <h2
             className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
           >
-            Organizadores
+            Acompañan
           </h2>
           <div className="w-16 h-1 bg-red mt-4 mb-6" />
           <p className="text-navy/60 max-w-xl text-base leading-relaxed">
@@ -52,7 +40,7 @@ export default function Organizadores() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {organizers.map((org) => (
             <div
               key={org.shortName}

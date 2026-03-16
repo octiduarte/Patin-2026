@@ -8,7 +8,7 @@ export default function Entradas() {
           Entradas
         </span>
         <h2 className="text-white font-black text-4xl md:text-5xl uppercase leading-tight text-balance mb-6">
-          ¿Querés participar?
+          Adquirí tu entrada y sé parte de la Copa Apertura Nacional &quot;B&quot;
         </h2>
         <p className="text-white/70 text-lg max-w-2xl mb-10">
           Completá tu inscripción antes del 18 de Abril de 2026 y sé parte de la

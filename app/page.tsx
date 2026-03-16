@@ -16,7 +16,6 @@ export default function Home() {
       <SobreTorneo />
       <LugarEvento />
       <Organizadores />
-      <Cronograma />
       <Sponsors />
       <Entradas />
       <Footer />

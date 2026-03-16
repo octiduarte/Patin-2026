@@ -4,25 +4,23 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: "+200", label: "Deportistas" },
-  { value: "8", label: "Días de Competencia" },
-  { value: "15+", label: "Provincias" },
-  { value: "1", label: "País Anfitrión" },
+  { value: "+100", label: "Deportistas" },
+  { value: "+7", label: "Días de Competencia" },
+  { value: "+10", label: "Provincias" },
 ];
 
 const photos = [
   "/images/edicion-2025/Horizontales/foto-2025_1.webp",
   "/images/edicion-2025/Horizontales/foto-2025_2.webp",
+  "/images/edicion-2025/Verticales/foto-2025_11.webp",
   "/images/edicion-2025/Horizontales/foto-2025_3.webp",
   "/images/edicion-2025/Horizontales/foto-2025_4.webp",
-  "/images/edicion-2025/Horizontales/foto-2025_5.webp",
   "/images/edicion-2025/Horizontales/foto-2025_6.webp",
   "/images/edicion-2025/Horizontales/foto-2025_7.webp",
-  "/images/edicion-2025/Horizontales/prueba.jpg",
-  "/images/edicion-2025/Verticales/foto-2025_8.webp",
-  "/images/edicion-2025/Verticales/foto-2025_9.webp",
   "/images/edicion-2025/Verticales/foto-2025_10.webp",
-  "/images/edicion-2025/Verticales/foto-2025_11.webp",
+  "/images/edicion-2025/Verticales/foto-2025_9.webp",
+  "/images/edicion-2025/Horizontales/foto-2025_13.webp",
+  "/images/edicion-2025/Verticales/foto-2025_8.webp",
   "/images/edicion-2025/Verticales/foto-2025_12.webp",
 ];
 
@@ -33,41 +31,27 @@ type PhotoSize = "large" | "tall" | "wide" | "small";
 const PHOTO_SIZES: PhotoSize[] = [
   "large", // 0
   "small", // 1
-  "tall",  // 2
+  "tall", // 2
   "small", // 3
-  "wide",  // 4
+  "wide", // 4
   "small", // 5
   "small", // 6
   "large", // 7
   "small", // 8
-  "tall",  // 9
+  "tall", // 9
   "small", // 10
-  "wide",  // 11
+  "wide", // 11
 ];
 
 const SIZE_CLASSES: Record<PhotoSize, string> = {
   large: "lg:col-span-2 lg:row-span-2",
-  tall:  "lg:row-span-2",
-  wide:  "lg:col-span-2",
+  tall: "lg:row-span-2",
+  wide: "lg:col-span-2",
   small: "",
 };
 
-function shufflePhotos(list: string[]) {
-  const shuffled = [...list];
-  for (let i = shuffled.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
-
 export default function SobreTorneo() {
-  const [randomizedPhotos, setRandomizedPhotos] = useState<string[]>(photos);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
-
-  useEffect(() => {
-    setRandomizedPhotos(shufflePhotos(photos));
-  }, []);
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -88,22 +72,20 @@ export default function SobreTorneo() {
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">
             El Torneo
           </span>
-          <h2
-            className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight text-balance"
-          >
+          <h2 className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight text-balance">
             Sobre el Torneo
           </h2>
           <div className="w-16 h-1 bg-red mt-4 mb-6" />
           <p className="text-navy/70 text-lg max-w-3xl leading-relaxed">
             La{" "}
             <strong className="text-navy">
-              Copa Apertura "B" Nacional de Patinaje Artístico sobre Ruedas
+              Copa Apertura Nacional "B" de Patinaje Artístico sobre Ruedas
             </strong>{" "}
             es uno de los torneos más importantes del calendario federativo
             argentino. Organizado por la{" "}
-            <strong>Federación Misionera de Patinaje (FEMIPAT)</strong> y
-            avalado por la{" "}
-            <strong>Confederación Argentina de Patinaje (CAP)</strong>, este
+            <strong>Confederación Argentina de Patinaje (CAP)</strong> y
+           la{" "}
+            <strong>Federación Misionera de Patinaje (FEMIPAT)</strong>, este
             evento reúne a los mejores patinadores del país en la categoría "B",
             representando a clubes y provincias de toda Argentina.
           </p>
@@ -116,15 +98,13 @@ export default function SobreTorneo() {
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
           {stats.map((stat) => (
             <div
               key={stat.label}
               className="bg-navy text-white rounded-sm p-6 flex flex-col items-center text-center"
             >
-              <span
-                className="font-black text-4xl md:text-5xl text-red leading-none"
-              >
+              <span className="font-black text-4xl md:text-5xl text-red leading-none">
                 {stat.value}
               </span>
               <span className="text-white/70 text-xs font-semibold uppercase tracking-widest mt-2">
@@ -136,16 +116,14 @@ export default function SobreTorneo() {
 
         {/* Gallery grid */}
         <div>
-          <h3
-            className="text-navy font-black text-2xl uppercase mb-6"
-          >
+          <h3 className="text-navy font-black text-2xl uppercase mb-6">
             Galería – Edición 2025
           </h3>
           <div
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 grid-flow-dense"
             style={{ gridAutoRows: "200px" }}
           >
-            {randomizedPhotos.map((photo, index) => (
+            {photos.map((photo, index) => (
               <button
                 key={photo}
                 type="button"
@@ -153,14 +131,16 @@ export default function SobreTorneo() {
                 className={[
                   "relative overflow-hidden rounded-sm bg-navy/5 group cursor-zoom-in",
                   SIZE_CLASSES[PHOTO_SIZES[index]],
-                ].filter(Boolean).join(" ")}
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
                 aria-label={`Abrir imagen ${index + 1}`}
               >
                 <Image
                   src={photo}
                   alt={`Imagen de la Copa Apertura 2025 (${index + 1})`}
                   fill
-                  sizes="(min-width: 1280px) 560px, (min-width: 1024px) 50vw, (min-width: 768px) 33vw, 50vw"
+                  sizes="(min-width: 1024px) 1200px, (min-width: 768px) 500px, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </button>
@@ -194,7 +174,7 @@ export default function SobreTorneo() {
               src={selectedPhoto}
               alt="Imagen ampliada de la Copa Apertura 2025"
               fill
-              sizes="(min-width: 1280px) 1200px, (min-width: 768px) 80vw, 95vw"
+              sizes="(min-width: 1024px) 1920px, (min-width: 768px) 80vw, 95vw"
               className="object-contain"
             />
           </div>
