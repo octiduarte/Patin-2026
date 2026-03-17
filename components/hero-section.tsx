@@ -55,23 +55,23 @@ export default function HeroSection() {
           className="hero-fade-up text-white uppercase leading-[0.88] tracking-tight text-balance"
           style={{ animationDelay: "0.25s" }}
         >
-          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-normal">
+          <span className="block text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white/90 font-normal">
             Copa
           </span>
-          <span className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-black">
+          <span className="block text-3xl md:text-4xl lg:text-4xl xl:text-5xl  2xl:text-6xl text-white/90 font-black">
             Apertura
           </span>
           {/* "Nacional" and "B" in a red parallelogram pill */}
           <span className="flex items-center flex-wrap lg:flex-nowrap gap-4 mt-1 font-black">
-            <span className="text-[clamp(2.8rem,8vw,6rem)]">Nacional</span>
+            <span className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Nacional</span>
             <span
-              className="block text-[clamp(2.8rem,8vw,6rem)] text-white/90 font-normal"
+              className="block text-3xl md:text-4xl lg:text-4xl xl:text-5xl  2xl:text-6xl text-white/90 font-normal"
               style={{ clipPath: "polygon(0 0,100% 0,96% 100%,0 100%)" }}
             >
               &quot;B&quot;
             </span>
           </span>
-          <span className="block text-[clamp(1.4rem,4vw,2.6rem)] text-white font-normal tracking-[0.08em] mt-3 lg:whitespace-nowrap">
+          <span className="block text-xl md:text-2xl lg:text-3xl xl:text-2xl  2xl:text-4xl text-white font-normal tracking-[0.08em] mt-3 lg:whitespace-nowrap">
             Patinaje Artístico
           </span>
         </h1>
