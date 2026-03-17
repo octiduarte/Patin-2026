@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const stats = [
-  { value: "+100", label: "Deportistas" },
+  { value: "+600", label: "Deportistas" },
   { value: "+7", label: "Días de Competencia" },
   { value: "+10", label: "Provincias" },
 ];
@@ -21,7 +21,6 @@ const photos = [
   "/images/edicion-2025/Verticales/foto-2025_9.webp",
   "/images/edicion-2025/Horizontales/foto-2025_13.webp",
   "/images/edicion-2025/Verticales/foto-2025_8.webp",
-  "/images/edicion-2025/Verticales/foto-2025_12.webp",
 ];
 
 type PhotoSize = "large" | "tall" | "wide" | "small";
