@@ -62,7 +62,7 @@ export default function HeroSection() {
             Apertura
           </span>
           {/* "Nacional" and "B" in a red parallelogram pill */}
-          <span className="flex items-center flex-wrap lg:flex-nowrap gap-4 mt-1 font-black">
+          <span className="flex items-center flex-wrap lg:flex-nowrap gap-4 xl:gap-2 mt-1 font-black">
             <span className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl">Nacional</span>
             <span
               className="block text-3xl md:text-4xl lg:text-4xl xl:text-5xl  2xl:text-6xl text-white/90 font-normal"
@@ -71,14 +71,14 @@ export default function HeroSection() {
               &quot;B&quot;
             </span>
           </span>
-          <span className="block text-xl md:text-2xl lg:text-3xl xl:text-2xl  2xl:text-4xl text-white font-normal tracking-[0.08em] mt-3 lg:whitespace-nowrap">
+          <span className="block text-xl md:text-2xl lg:text-3xl xl:text-2xl xl:mt-1 2xl:text-4xl text-white font-normal tracking-[0.08em] mt-3 lg:whitespace-nowrap">
             Patinaje Artístico
           </span>
         </h1>
 
         {/* Diamond divider */}
         <div
-          className="hero-fade-up flex items-center gap-4 my-4 md:my-8"
+          className="hero-fade-up flex items-center gap-4 my-4 md:my-8 xl:my-6"
           style={{ animationDelay: "0.4s" }}
         >
           <div className="h-px flex-1 bg-white/15" />
@@ -88,7 +88,7 @@ export default function HeroSection() {
 
         {/* Meta info */}
         <div
-          className="hero-fade-up flex flex-wrap items-center gap-x-4 gap-y-2 mb-10"
+          className="hero-fade-up flex flex-wrap items-center gap-x-4 gap-y-2 mb-10 xl:mb-6"
           style={{ animationDelay: "0.52s" }}
         >
           <span className="text-white/60 text-sm uppercase tracking-widest">
@@ -110,14 +110,14 @@ export default function HeroSection() {
 
         {/* Organizers strip */}
         <div
-          className="hero-fade-up mt-6 md:pt-8 border-t border-white/10 space-y-3"
+          className="hero-fade-up mt-6 md:pt-8 xl:mt-4 xl:pt-6 border-t border-white/10 space-y-3"
           style={{ animationDelay: "0.8s" }}
         >
           <span className="text-white/35 text-[10px] uppercase tracking-widest">
             Organiza:
           </span>
           <div className="flex flex-nowrap items-stretch border border-white/20 rounded-sm overflow-hidden w-full lg:w-auto">
-            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
               <Image
                 src="/images/logos/navbar/logo_copa-png.webp"
                 alt="Logo Copa Apertura B Nacional"
@@ -126,7 +126,7 @@ export default function HeroSection() {
                 className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
               />
             </div>
-            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
               <Image
                 src="/images/logos/organizaciones/logo_cap_blanco.webp"
                 alt="Logo CAP"
@@ -135,7 +135,7 @@ export default function HeroSection() {
                 className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
               />
             </div>
-            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
               <Image
                 src="/images/logos/organizaciones/logo_femipat.webp"
                 alt="Logo FEMIPAT"
@@ -144,7 +144,7 @@ export default function HeroSection() {
                 className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
               />
             </div>
-            <div className="flex items-center justify-center p-3 md:p-4 border-r border-white/20">
+            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
               <Image
                 src="/images/logos/organizaciones/logo_ministerio_deportes.webp"
                 alt="Logo Misiones Gobierno"
@@ -153,7 +153,7 @@ export default function HeroSection() {
                 className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
               />
             </div>
-            <div className="flex items-center justify-center p-3 md:p-4">
+            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2">
               <Image
                 src="/images/logos/organizaciones/logo_municipalidad_posadas.webp"
                 alt="Logo Posadas"
