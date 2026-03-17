@@ -53,7 +53,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mt-6">
               <span className="text-white/30 text-xs uppercase tracking-widest">Seguinos:</span>
               <a
-                href="https://instagram.com/femipat"
+                href="https://instagram.com/fe.mi.pat"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram FEMIPAT"
@@ -62,7 +62,7 @@ export default function Footer() {
                 <Instagram size={16} />
               </a>
               <a
-                href="https://facebook.com/femipat"
+                href="https://www.facebook.com/FederacionMisioneraPatinaje/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook FEMIPAT"

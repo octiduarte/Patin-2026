@@ -88,7 +88,7 @@ export default function HeroSection() {
 
         {/* Meta info */}
         <div
-          className="hero-fade-up flex flex-wrap items-center gap-x-4 gap-y-2 mb-10 xl:mb-6"
+          className="hero-fade-up flex flex-wrap items-center gap-x-4 gap-y-2 mb-10 md:mb-4 xl:mb-6"
           style={{ animationDelay: "0.52s" }}
         >
           <span className="text-white/60 text-sm uppercase tracking-widest">
@@ -116,16 +116,7 @@ export default function HeroSection() {
           <span className="text-white/35 text-[10px] uppercase tracking-widest">
             Organiza:
           </span>
-          <div className="flex flex-nowrap items-stretch border border-white/20 rounded-sm overflow-hidden w-full lg:w-auto">
-            <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
-              <Image
-                src="/images/logos/navbar/logo_copa-png.webp"
-                alt="Logo Copa Apertura B Nacional"
-                width={160}
-                height={160}
-                className="object-contain h-7 md:h-11 w-auto brightness-0 invert"
-              />
-            </div>
+          <div className="flex flex-nowrap items-stretch border border-white/20 rounded-sm overflow-hidden w-fit lg:w-fit">
             <div className="flex items-center justify-center p-3 md:p-4 xl:p-2 border-r border-white/20">
               <Image
                 src="/images/logos/organizaciones/logo_cap_blanco.webp"
