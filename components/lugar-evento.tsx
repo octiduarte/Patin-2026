@@ -31,7 +31,7 @@ export default function LugarEvento() {
                 <span className="text-white font-black text-xl uppercase" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   CEPARD
                 </span>
-                <p className="text-white/70 text-sm">Centro Deportivo de Posadas</p>
+                <p className="text-white/70 text-sm">Centro Provincial de Alto Rendimiento</p>
               </div>
             </div>
 
@@ -43,7 +43,7 @@ export default function LugarEvento() {
                 Centro Deportivo CEPARD
               </h3>
               <p className="text-white/70 leading-relaxed text-sm">
-                El CEPARD (Centro Deportivo de Posadas) es una de las instalaciones deportivas más modernas del NEA (Noreste Argentino). 
+                El CEPARD (Centro Provincial de Alto Rendimiento) es una de las instalaciones deportivas más modernas del NEA (Noreste Argentino). 
                 Cuenta con canchas multifunción cubiertas, vestuarios de primer nivel, tribunas con capacidad para cientos de espectadores 
                 y accesibilidad para personas con movilidad reducida.
               </p>

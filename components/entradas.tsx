@@ -11,11 +11,11 @@ export default function Entradas() {
           Adquirí tu entrada y sé parte de la Copa Apertura Nacional &quot;B&quot;
         </h2>
         <p className="text-white/70 text-lg max-w-2xl mb-10">
-          Completá tu inscripción antes del 18 de Abril de 2026 y sé parte de la
+          Comprá tus entradas antes del 25 de Abril de 2026 y sé parte de la
           Copa Apertura Nacional "B".
         </p>
         <a
-          href="#"
+          href="https://www.quieroentrar.com.ar/event/copa-apertura-nacional-b-patinaje-artistico-1"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-red hover:bg-red-dark text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-sm transition-all duration-200 shadow-lg shadow-red/20 hover:shadow-red/40 hover:-translate-y-0.5"
