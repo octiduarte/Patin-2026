@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import FadeIn from "./fade-in";
 
 const stats = [
   { value: "+600", label: "Deportistas" },
@@ -64,10 +65,10 @@ export default function SobreTorneo() {
   }, []);
 
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-white">
+    <section id="sobre" className="scroll-mt-16 py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Section header */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <FadeIn className="flex flex-col items-center text-center mb-14">
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">
             El Torneo
           </span>
@@ -94,27 +95,28 @@ export default function SobreTorneo() {
             distintas edades y especialidades se darán cita en el CEPARD para
             demostrar su talento y representar a sus provincias con orgullo.
           </p>
-        </div>
+        </FadeIn>
 
         {/* Stats row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-navy text-white rounded-sm p-6 flex flex-col items-center text-center"
-            >
-              <span className="font-black text-4xl md:text-5xl text-red leading-none">
-                {stat.value}
-              </span>
-              <span className="text-white/70 text-xs font-semibold uppercase tracking-widest mt-2">
-                {stat.label}
-              </span>
-            </div>
+          {stats.map((stat, i) => (
+            <FadeIn key={stat.label} delay={i * 0.15}>
+              <div
+                className="bg-navy text-white rounded-sm p-6 flex flex-col items-center text-center h-full"
+              >
+                <span className="font-black text-4xl md:text-5xl text-red leading-none">
+                  {stat.value}
+                </span>
+                <span className="text-white/70 text-xs font-semibold uppercase tracking-widest mt-2">
+                  {stat.label}
+                </span>
+              </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* Gallery grid */}
-        <div>
+        <FadeIn delay={0.2}>
           <h3 className="text-navy font-black text-2xl uppercase mb-6">
             Galería – Edición 2025
           </h3>
@@ -139,13 +141,14 @@ export default function SobreTorneo() {
                   src={photo}
                   alt={`Imagen de la Copa Apertura 2025 (${index + 1})`}
                   fill
+                  unoptimized
                   sizes="(min-width: 1024px) 1200px, (min-width: 768px) 500px, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </button>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       {selectedPhoto ? (

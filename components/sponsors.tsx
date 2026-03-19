@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { MapPin, Tag, Instagram } from "lucide-react"
+import FadeIn from "./fade-in"
 
 interface Sponsor {
   name: string
@@ -108,10 +109,10 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="py-20 md:py-28 bg-[#f5f6fa]">
+    <section id="sponsors" className="scroll-mt-16 py-20 md:py-28 bg-[#f5f6fa]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <FadeIn className="flex flex-col items-center text-center mb-14">
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Colaboradores</span>
           <h2
             className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
@@ -122,23 +123,25 @@ export default function Sponsors() {
           <p className="text-navy/60 max-w-xl text-base leading-relaxed">
             Empresas y emprendimientos que hacen posible este gran evento. ¡Gracias a nuestros sponsors por su apoyo!
           </p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sponsors.map((sponsor) => (
-            <SponsorCard key={sponsor.name} sponsor={sponsor} />
+          {sponsors.map((sponsor, i) => (
+            <FadeIn key={sponsor.name} delay={i * 0.15}>
+              <SponsorCard sponsor={sponsor} />
+            </FadeIn>
           ))}
         </div>
 
         {/* CTA to sponsors */}
-        <div className="mt-12 text-center">
+        <FadeIn delay={0.4} className="mt-12 text-center">
           <p className="text-navy/50 text-sm">
             ¿Querés ser sponsor del torneo? Contactanos a través de{" "}
             <a href="mailto:femipat@gmail.com" className="text-red font-semibold hover:underline">
               femipat@gmail.com
             </a>
           </p>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )
