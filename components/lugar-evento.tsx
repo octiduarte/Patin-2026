@@ -1,12 +1,13 @@
 import Image from "next/image"
 import { MapPin, Navigation, Clock, Phone } from "lucide-react"
+import FadeIn from "./fade-in"
 
 export default function LugarEvento() {
   return (
-    <section id="lugar" className="py-20 md:py-28 bg-navy">
+    <section id="lugar" className="scroll-mt-16 py-20 md:py-28 bg-navy">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Section header */}
-        <div className="flex flex-col items-start mb-12">
+        <FadeIn direction="up" className="flex flex-col items-start mb-12">
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Sede Oficial</span>
           <h2
             className="text-white font-black text-4xl md:text-5xl uppercase leading-tight text-balance"
@@ -14,11 +15,11 @@ export default function LugarEvento() {
             Lugar del Evento
           </h2>
           <div className="w-16 h-1 bg-red mt-4" />
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Left: venue info + image */}
-          <div className="flex flex-col gap-6">
+          <FadeIn direction="left" delay={0.2} className="flex flex-col gap-6">
             <div className="relative aspect-video rounded-sm overflow-hidden">
               <Image
                 src="/images/cepard.webp"
@@ -72,10 +73,10 @@ export default function LugarEvento() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right: Map + directions */}
-          <div className="flex flex-col gap-6">
+          <FadeIn direction="right" delay={0.4} className="flex flex-col gap-6">
             {/* Map embed placeholder */}
             <div className="rounded-sm overflow-hidden border border-white/10" style={{ height: 340 }}>
               <iframe
@@ -123,7 +124,7 @@ export default function LugarEvento() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

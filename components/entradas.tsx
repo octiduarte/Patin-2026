@@ -1,9 +1,10 @@
 import { ExternalLink } from "lucide-react";
+import FadeIn from "./fade-in";
 
 export default function Entradas() {
   return (
-    <section id="Entradas" className="py-20 md:py-28 bg-navy">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+    <section id="Entradas" className="scroll-mt-16 py-20 md:py-28 bg-navy">
+      <FadeIn className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center text-center">
         <span className="text-red text-xs font-black uppercase tracking-widest mb-4">
           Entradas
         </span>
@@ -23,7 +24,7 @@ export default function Entradas() {
           Comprar entradas
           <ExternalLink size={16} />
         </a>
-      </div>
+      </FadeIn>
     </section>
   );
 }

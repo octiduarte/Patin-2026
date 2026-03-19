@@ -1,3 +1,5 @@
+import FadeIn from "./fade-in"
+
 interface DaySchedule {
   day: string
   date: string
@@ -78,10 +80,10 @@ const schedule: DaySchedule[] = [
 
 export default function Cronograma() {
   return (
-    <section id="cronograma" className="py-20 md:py-28 bg-navy">
+    <section id="cronograma" className="scroll-mt-16 py-20 md:py-28 bg-navy">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <FadeIn className="flex flex-col items-center text-center mb-14">
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Programa</span>
           <h2
             className="text-white font-black text-4xl md:text-5xl uppercase leading-tight"
@@ -92,14 +94,15 @@ export default function Cronograma() {
           <p className="text-white/60 max-w-xl text-base leading-relaxed">
             25 de Abril al 2 de Mayo de 2025 · CEPARD, Posadas, Misiones
           </p>
-        </div>
+        </FadeIn>
 
         {/* Schedule grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {schedule.map((day, idx) => (
-            <div
+            <FadeIn
               key={day.date}
-              className="bg-navy-light rounded-sm overflow-hidden border border-white/5 hover:border-red/40 transition-all duration-300"
+              delay={idx * 0.1}
+              className="bg-navy-light rounded-sm overflow-hidden border border-white/5 hover:border-red/40 transition-all duration-300 h-full flex flex-col"
             >
               {/* Day header */}
               <div className="bg-red px-4 py-3 flex items-center justify-between">
@@ -117,7 +120,7 @@ export default function Cronograma() {
               </div>
 
               {/* Events */}
-              <div className="p-4 flex flex-col gap-3">
+              <div className="p-4 flex flex-col gap-3 flex-1">
                 {day.events.map((event) => (
                   <div
                     key={event.time + event.description}
@@ -141,14 +144,16 @@ export default function Cronograma() {
                   </div>
                 ))}
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* Note */}
-        <p className="text-white/30 text-xs text-center mt-8">
-          * Los horarios pueden estar sujetos a modificaciones. Consultar el cronograma oficial publicado por FEMIPAT.
-        </p>
+        <FadeIn delay={0.2}>
+          <p className="text-white/30 text-xs text-center mt-8">
+            * Los horarios pueden estar sujetos a modificaciones. Consultar el cronograma oficial publicado por FEMIPAT.
+          </p>
+        </FadeIn>
       </div>
     </section>
   )

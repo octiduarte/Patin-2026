@@ -1,4 +1,5 @@
 import Image from "next/image"
+import FadeIn from "./fade-in"
 
 interface OrganizerLogo {
   name: string
@@ -24,10 +25,10 @@ const organizers: OrganizerLogo[] = [
 
 export default function Organizadores() {
   return (
-    <section id="organizadores" className="py-20 md:py-28 bg-white">
+    <section id="organizadores" className="scroll-mt-16 py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <FadeIn className="flex flex-col items-center text-center mb-14">
           <span className="text-red text-xs font-black uppercase tracking-widest mb-3">Instituciones</span>
           <h2
             className="text-navy font-black text-4xl md:text-5xl uppercase leading-tight"
@@ -38,13 +39,14 @@ export default function Organizadores() {
           <p className="text-navy/60 max-w-xl text-base leading-relaxed">
             Este torneo es posible gracias al compromiso y trabajo conjunto de las siguientes instituciones deportivas y gubernamentales.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          {organizers.map((org) => (
-            <div
+          {organizers.map((org, i) => (
+            <FadeIn
               key={org.shortName}
-              className="group border border-navy/10 rounded-sm p-8 flex flex-col items-center text-center hover:border-red hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              delay={i * 0.2}
+              className="group border border-navy/10 rounded-sm p-8 flex flex-col items-center text-center hover:border-red hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full"
             >
               {/* Logo */}
               <div className="w-full h-24 mb-5 relative">
@@ -67,16 +69,16 @@ export default function Organizadores() {
 
               {/* Decorative line */}
               <div className="w-8 h-0.5 bg-red/30 mt-4 group-hover:w-12 group-hover:bg-red transition-all duration-300" />
-            </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* Secondary text */}
-        <div className="mt-10 text-center">
+        <FadeIn delay={0.4} className="mt-10 text-center">
           <p className="text-navy/40 text-xs uppercase tracking-widest">
             Evento avalado por la Confederación Argentina de Patinaje · Temporada 2026
           </p>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )

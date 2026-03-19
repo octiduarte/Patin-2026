@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 const navLinks = [
   { href: "#sobre", label: "El Torneo" },
   { href: "#lugar", label: "Lugar" },
+  { href: "#organizadores", label: "Acompañan" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#Entradas", label: "Entradas" },
 ]
@@ -17,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
