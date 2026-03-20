@@ -21,7 +21,7 @@ const WhatsAppIcon = () => (
 )
 
 export default function WhatsAppButton({
-  phoneNumber = '5493764513791',
+  phoneNumber = '5493764514791',
   message = 'Hola! Me gustaría obtener más información sobre el torneo.',
   position = 'bottom-right',
 }: WhatsAppButtonProps) {
