@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import '../styles/globals.css'
+import WhatsAppButton from '@/components/whatsapp-button'
 
 const gotham = localFont({
   src: [
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${gotham.variable} font-sans antialiased`}>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )

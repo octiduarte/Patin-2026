@@ -49,7 +49,7 @@ const sponsors: Sponsor[] = [
     image: "/images/sponsors/rio_uruguay.webp",
     description:
       "Nuestro sponsor oficial Río Uruguay acompaña esta competencia, empresa nacida en 1969 en Apóstoles y con una larga trayectoria en el transporte de la región.",
-    discount: "Descuentos especiales en traslados desde cualquier punto del país",
+    discount: "Descuento del 30% en servicios semicama/cama para participantes y acompañantes del torneo",
     badge: "Transporte",
     instagram: "@riouruguaybus",
   },
