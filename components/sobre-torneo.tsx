@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import FadeIn from "./fade-in";
 
 const stats = [
-  { value: "+600", label: "Deportistas" },
+  { value: "+800", label: "Deportistas" },
   { value: "+7", label: "Días de Competencia" },
   { value: "+10", label: "Provincias" },
 ];
