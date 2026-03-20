@@ -10,8 +10,8 @@ interface WhatsAppButtonProps {
 
 const WhatsAppIcon = () => (
   <svg
-    width="28"
-    height="28"
+    width="21"
+    height="21"
     viewBox="0 0 24 24"
     fill="white"
     xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +41,8 @@ export default function WhatsAppButton({
     position: 'fixed',
     bottom: '24px',
     [position === 'bottom-right' ? 'right' : 'left']: '24px',
-    width: '60px',
-    height: '60px',
+    width: '45px',
+    height: '45px',
     borderRadius: '50%',
     backgroundColor: '#25D366',
     display: 'flex',
