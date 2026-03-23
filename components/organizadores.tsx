@@ -21,6 +21,12 @@ const organizers: OrganizerLogo[] = [
     role: "Apoyo Municipal",
     logoSrc: "/images/logos/organizaciones/logo_municipalidad_posadas.webp",
   },
+  {
+    name: "Instituto de Previsiòn Social Misiones",
+    shortName: "IPS",
+    role: "Apoyo Institucional",
+    logoSrc: "/images/logos/organizaciones/logo-ips.webp",
+  },
 ]
 
 export default function Organizadores() {
@@ -41,7 +47,7 @@ export default function Organizadores() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6 max-w-2xl md:max-w-3xl xl:max-w-4xl mx-auto">
           {organizers.map((org, i) => (
             <FadeIn
               key={org.shortName}

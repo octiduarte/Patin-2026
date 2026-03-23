@@ -176,7 +176,7 @@ export default function SobreTorneo() {
               src={selectedPhoto}
               alt="Imagen ampliada de la Copa Apertura 2025"
               fill
-              sizes="(min-width: 1024px) 1920px, (min-width: 768px) 80vw, 95vw"
+              sizes="(min-width: 1304px) 1200px, 92vw"
               className="object-contain"
             />
           </div>

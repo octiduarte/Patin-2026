@@ -13,7 +13,7 @@ export default function HeroSection() {
           src="/images/hero-section/fondo-herosection2.webp"
           alt="Patinaje artístico sobre ruedas – Copa Apertura B Nacional"
           fill
-          sizes="(min-width: 1024px) 62vw, 100vw"
+          sizes="(min-width: 1024px) 45vw, 100vw"
           className="object-cover object-center"
           priority
           quality={75}
