@@ -104,7 +104,7 @@ export default function Footer() {
             <div className="mt-6 pt-6 border-t border-white/10">
               <p className="text-white/30 text-xs leading-relaxed">
                 Torneo oficial avalado por la{" "}
-                <a href="https://www.cap.org.ar" target="_blank" rel="noopener noreferrer" className="text-red hover:underline">
+                <a href="https://capatinoficial.com/" target="_blank" rel="noopener noreferrer" className="text-red hover:underline">
                   Confederación Argentina de Patinaje (CAP)
                 </a>
               </p>
