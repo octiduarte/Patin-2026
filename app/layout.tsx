@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { Analytics } from '@vercel/analytics/next'
 import '../styles/globals.css'
 import WhatsAppButton from '@/components/whatsapp-button'
 
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className={`${gotham.variable} font-sans antialiased`}>
         {children}
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   )

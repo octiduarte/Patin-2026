@@ -120,7 +120,15 @@ export default function Footer() {
             © 2025 Copa Apertura Nacional &quot;B&quot; – Patinaje Artístico. FEMIPAT · Posadas, Misiones.
           </p>
           <p className="text-white/20 text-xs">
-            Diseñado para el deporte argentino.
+            Diseñado para el deporte argentino. · Sitio web realizado por{" "}
+            <a
+              href="https://www.godevs.com.ar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-red transition-colors duration-200"
+            >
+              GoDevs
+            </a>
           </p>
         </div>
       </div>
