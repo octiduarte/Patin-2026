@@ -46,7 +46,7 @@ export default function Footer() {
               <span className="text-white/60 text-sm">Posadas, Misiones, Argentina</span>
             </div>
             <p className="text-white/40 text-sm mt-2 pl-5">
-              25 de Abril – 2 de Mayo de 2025 · CEPARD
+              25 de Abril – 2 de Mayo de 2026 · CEPARD
             </p>
 
             {/* Social media */}
