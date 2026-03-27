@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { MapPin, Tag, Instagram } from "lucide-react"
+import { MapPin, Tag, Instagram, Phone } from "lucide-react"
 import FadeIn from "./fade-in"
 
 interface Sponsor {
@@ -10,6 +10,7 @@ interface Sponsor {
   location?: string
   discount?: string
   instagram?: string
+  phone?: string
   badge: string
 }
 
@@ -52,6 +53,7 @@ const sponsors: Sponsor[] = [
     discount: "Descuento del 30% en servicios semicama/cama para participantes y acompañantes del torneo",
     badge: "Transporte",
     instagram: "@riouruguaybus",
+    phone: "+54 9 3765 51-2381",
   },
 ]
 
@@ -99,6 +101,12 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
             <div className="flex items-center gap-2">
               <Instagram size={13} className="text-red shrink-0" />
               <span className="text-navy/60 text-xs">{sponsor.instagram}</span>
+            </div>
+          )}
+          {sponsor.phone && (
+            <div className="flex items-center gap-2">
+              <Phone size={13} className="text-red shrink-0" />
+              <span className="text-navy/60 text-xs">{sponsor.phone}</span>
             </div>
           )}
         </div>
