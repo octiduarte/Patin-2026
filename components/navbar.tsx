@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#lugar", label: "Lugar" },
   { href: "#organizadores", label: "Acompañan" },
   { href: "#sponsors", label: "Sponsors" },
+  { href: "#cronograma", label: "Cronograma" },
   { href: "#Entradas", label: "Entradas" },
 ]
 
@@ -55,6 +56,8 @@ export default function Navbar() {
               className={
                 link.label === "Entradas"
                   ? "bg-red text-white px-6 py-2 rounded-sm font-semibold uppercase tracking-wider transition-opacity duration-200 hover:opacity-90 text-sm"
+                  : link.label === "Cronograma"
+                    ? "text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-red"
                   : "text-white/80 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-red"
               }
             >
@@ -84,6 +87,8 @@ export default function Navbar() {
               className={
                 link.label === "Entradas"
                   ? "block bg-red text-white font-semibold uppercase tracking-wider py-3 px-4 mb-3 rounded-sm text-sm transition-opacity hover:opacity-90"
+                  : link.label === "Cronograma"
+                    ? "block text-white/80 hover:text-red font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
                   : "block text-white/80 hover:text-red font-semibold uppercase tracking-wider py-3 border-b border-white/10 text-sm transition-colors"
               }
             >
