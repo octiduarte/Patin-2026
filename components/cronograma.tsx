@@ -231,8 +231,6 @@ function getEventType(block: RawBlock): DaySchedule["events"][number]["type"] {
 function formatQuantityLabel(block: RawBlock) {
   if (!block.cantidad) return undefined
 
-  if (block.tipo === "prueba_de_pista") return `${block.cantidad} salidas`
-  if (block.tipo === "premiacion_prueba_receso") return `${block.cantidad} tandas`
   return `Cantidad: ${block.cantidad}`
 }
 
