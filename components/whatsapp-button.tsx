@@ -45,6 +45,7 @@ export default function WhatsAppButton({
     height: '45px',
     borderRadius: '50%',
     backgroundColor: '#25D366',
+    overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -64,6 +65,7 @@ export default function WhatsAppButton({
     backgroundColor: '#25D366',
     opacity: 0.4,
     animation: 'pulse 2s infinite',
+    pointerEvents: 'none',
   }
 
   const keyframes = `

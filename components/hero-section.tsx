@@ -97,7 +97,7 @@ export default function HeroSection() {
             {" "}al{" "}
             <strong className="text-white font-black">2 de Mayo</strong>
           </span>
-          <span className="bg-red text-white text-xs font-black uppercase tracking-widest px-3 py-1.5">
+          <span className="text-white text-xs font-black uppercase tracking-widest py-1.5">
             Centro Deportivo &quot;CEPARD&quot;
           </span>
           <span className="text-white/40 text-sm uppercase tracking-widest">
@@ -105,8 +105,22 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Split CTA */}
-      
+        {/* CTA */}
+        <div
+          className="hero-fade-up flex flex-wrap items-center gap-4 mb-10 md:mb-6 xl:mb-8"
+          style={{ animationDelay: "0.64s" }}
+        >
+          <a
+            href="https://www.quieroentrar.com.ar/event/copa-apertura-nacional-b-patinaje-artistico-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 overflow-hidden rounded-sm border border-white/20 bg-linear-to-r from-red via-red to-red-dark px-8 py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-red/35 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-red/55"
+          >
+            <span className="absolute inset-0 bg-linear-to-r from-white/0 via-white/15 to-white/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+            <span className="relative">Comprar entrada</span>
+            <ArrowRight size={16} />
+          </a>
+        </div>
 
         {/* Organizers strip */}
         <div
